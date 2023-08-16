@@ -1,4 +1,4 @@
-import { footer } from "@/utils/data";
+import { footer } from '@/utils/data'
 
 // Footer component
 export default function Footer() {
@@ -22,5 +22,5 @@ export default function Footer() {
         <div className="h-4 border-x border-gray-500 xs:h-16"></div>
       </div>
     </>
-  );
+  )
 }

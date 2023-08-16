@@ -26,3 +26,12 @@ export function formatDate(date: string): string {
     day: "2-digit",
   }).format(new Date(date));
 }
+
+// export function formatDateTailwind(date: string) {
+//   return new Date(`${date}T00:00:00Z`).toLocaleDateString("en-US", {
+//     day: "numeric",
+//     month: "long",
+//     year: "numeric",
+//     timeZone: "UTC",
+//   });
+// }

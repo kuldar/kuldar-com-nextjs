@@ -1,46 +1,50 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: ["./src/components/**/*.{ts,tsx}", "./src/app/**/*.{ts,tsx}"],
+  content: [
+    './src/components/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx}',
+    './mdx-components.tsx',
+  ],
   theme: {
     extend: {
       colors: {
         gray: {
-          1000: "#050608",
-          950: "#0A0C0F",
-          900: "#0C0F12",
-          800: "#13171D",
-          700: "#1A2028",
-          600: "#222933",
-          500: "#2A323E",
-          400: "#333C49",
-          300: "#3D4654",
-          200: "#48515E",
-          100: "#5A6372",
-          50: "#77818F",
-          40: "#AFB9C9",
-          30: "#D7DDE4",
+          1000: '#050608',
+          950: '#0A0C0F',
+          900: '#0C0F12',
+          800: '#13171D',
+          700: '#1A2028',
+          600: '#222933',
+          500: '#2A323E',
+          400: '#333C49',
+          300: '#3D4654',
+          200: '#48515E',
+          100: '#5A6372',
+          50: '#77818F',
+          40: '#AFB9C9',
+          30: '#D7DDE4',
         },
         green: {
-          900: "#003311",
-          800: "#005B1E",
-          700: "#008528",
-          600: "#00AC2E",
-          500: "#00CB2C",
-          400: "#17E134",
-          300: "#30F03B",
-          200: "#84F97F",
-          100: "#D8FFD1",
+          900: '#003311',
+          800: '#005B1E',
+          700: '#008528',
+          600: '#00AC2E',
+          500: '#00CB2C',
+          400: '#17E134',
+          300: '#30F03B',
+          200: '#84F97F',
+          100: '#D8FFD1',
         },
       },
       maxWidth: {
-        "8xl": "90rem",
+        '8xl': '90rem',
       },
       screens: {
-        xs: "475px",
+        xs: '475px',
       },
       letterSpacing: {
-        snug: "-0.0125em",
+        snug: '-0.0125em',
       },
       backgroundImage: {
         dotted: `url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 0.75C1.5 1.16421 1.16421 1.5 0.75 1.5C0.335786 1.5 0 1.16421 0 0.75C0 0.335786 0.335786 0 0.75 0C1.16421 0 1.5 0.335786 1.5 0.75Z' fill='%2339393D'/%3E%3C/svg%3E%0A");`,
@@ -50,10 +54,10 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ["Satoshi", "sans-serif"],
+      sans: ['Satoshi', 'sans-serif'],
     },
   },
   plugins: [],
-};
+}
 
-export default config;
+export default config
