@@ -1,7 +1,8 @@
 import { getAllArticles } from '@/utils/get-all-articles'
+import { Article as ArticleType } from '@/utils/get-all-articles'
 
 // Article
-function Article({ article }) {
+function Article({ article }: { article: ArticleType }) {
   return (
     <article>
       <div>
