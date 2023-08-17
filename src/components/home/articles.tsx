@@ -2,7 +2,7 @@ import SectionTitle from '@/components/shared/section-title'
 import Icons from '@/components/svgs/icons'
 import { ButtonSmall } from '@/components/shared/buttons'
 
-import { getRecentArticles } from '@/utils/get-all-articles'
+import { getRecentArticles } from '@/utils/fetch-articles'
 
 // Articles
 export default async function Articles() {

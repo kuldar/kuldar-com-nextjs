@@ -38,7 +38,7 @@ export async function getAllArticles() {
 }
 
 // Get recent articles
-export async function getRecentArticles() {
+export async function getRecentArticles(count = 5) {
   let articleFilenames = await glob('*/page.mdx', {
     cwd: './src/app/articles',
   })
@@ -49,5 +49,5 @@ export async function getRecentArticles() {
   articles.sort((a, z) => new Date(z.date) - new Date(a.date))
 
   // Return 5 most recent articles
-  return articles.slice(0, 5)
+  return articles.slice(0, count)
 }

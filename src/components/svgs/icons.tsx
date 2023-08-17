@@ -146,13 +146,13 @@ export const ArrowRight = ({ className }: { className?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="3"
+      strokeWidth="3"
       stroke="currentColor"
       className={className}
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
       />
     </svg>
@@ -166,14 +166,14 @@ export const ArrowLeft = ({ className }: { className?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="3"
+      strokeWidth="3"
       stroke="currentColor"
       className={className}
     >
       <path
         transform="scale(-1, 1) translate(-24, 0)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
       />
     </svg>
@@ -232,7 +232,7 @@ export const Share = ({ className }: { className?: string }) => {
       <path
         d="M17 6.99999L7 13.8M8.0543 16.9169L17 23M9 15C9 16.933 7.433 18.5 5.5 18.5C3.567 18.5 2 16.933 2 15C2 13.067 3.567 11.5 5.5 11.5C7.433 11.5 9 13.067 9 15ZM23 5.5C23 7.433 21.433 9 19.5 9C17.567 9 16 7.433 16 5.5C16 3.567 17.567 2 19.5 2C21.433 2 23 3.567 23 5.5ZM23 24.5C23 26.433 21.433 28 19.5 28C17.567 28 16 26.433 16 24.5C16 22.567 17.567 21 19.5 21C21.433 21 23 22.567 23 24.5Z"
         stroke="currentColor"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       />
     </svg>
   )
@@ -246,6 +246,20 @@ export const Heart = ({ className }: { className?: string }) => {
         d="M9.6359 17.9105L9.62872 17.9075L9.60615 17.8955C9.47414 17.8247 9.34319 17.752 9.21333 17.6775C7.65211 16.773 6.1931 15.7104 4.86051 14.5074C2.50051 12.3604 0 9.1743 0 5.25021C0 2.32213 2.52718 7.09531e-05 5.57744 7.09531e-05C6.42539 -0.00397858 7.26337 0.178416 8.02905 0.53369C8.79473 0.888964 9.46842 1.40797 10 2.05212C10.5317 1.40784 11.2055 0.888751 11.9714 0.533472C12.7373 0.178193 13.5755 -0.00412916 14.4236 7.09531e-05C17.4728 7.09531e-05 20 2.32213 20 5.25021C20 9.17531 17.4995 12.3614 15.1395 14.5064C13.8069 15.7094 12.3479 16.772 10.7867 17.6765C10.6568 17.7514 10.5259 17.8244 10.3938 17.8955L10.3713 17.9075L10.3641 17.9115L10.361 17.9125C10.2498 17.97 10.1259 18 10 18C9.87414 18 9.75019 17.97 9.63897 17.9125L9.6359 17.9105Z"
         fill="currentColor"
       />
+    </svg>
+  )
+}
+
+// Plane
+export const Plane = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z" />
     </svg>
   )
 }
@@ -268,6 +282,7 @@ const Icons = {
   ShareTwitter,
   Share,
   Heart,
+  Plane,
 }
 
 export default Icons

@@ -1,5 +1,5 @@
-import { getAllArticles } from '@/utils/get-all-articles'
-import { Article as ArticleType } from '@/utils/get-all-articles'
+import { getAllArticles } from '@/utils/fetch-articles'
+import { Article as ArticleType } from '@/utils/fetch-articles'
 
 // Article
 function Article({ article }: { article: ArticleType }) {
