@@ -1,4 +1,4 @@
-import { getAllArticles } from '@/utils/getAllArticles'
+import { getAllArticles } from '@/utils/get-all-articles'
 
 // Article
 function Article({ article }) {

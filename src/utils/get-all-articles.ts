@@ -1,12 +1,25 @@
 import glob from 'fast-glob'
 
+import { MDXModule } from 'mdx/types'
+
+type ArticleMeta = {
+  slug: string
+  date: string
+  title: string
+  description: string
+}
+
+export type Article = MDXModule & ArticleMeta
+
 // Import article
-async function importArticle(articleFilename: string) {
-  let { article } = await import(`../app/articles/${articleFilename}`)
+async function importArticle(articleFilename: string): Promise<Article> {
+  let { article } = (await import(`../app/articles/${articleFilename}`)) as {
+    article: Article
+  }
 
   return {
-    slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
     ...article,
+    slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
   }
 }
 
