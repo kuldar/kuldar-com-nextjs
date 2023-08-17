@@ -1,6 +1,23 @@
 import Icons from '@/components/svgs/icons'
 import SectionTitle from '@/components/shared/section-title'
-import { experiments } from '@/utils/data'
+
+export const experiments = [
+  {
+    name: 'Generated',
+    description: 'Wallpapers for mobile',
+    link: 'https://generatedhumans.com/',
+  },
+  {
+    name: 'Looper',
+    description: 'Creative Figma plugin',
+    link: 'https://github.com/kuldar/figma-looper',
+  },
+  {
+    name: 'Untick',
+    description: 'Tiny Chrome extension',
+    link: 'https://github.com/kuldar/untick',
+  },
+]
 
 // Experiments
 export default function Experiments() {

@@ -23,14 +23,14 @@ export const ArticleLayout = ({ children, article }: any) => {
                   href="#"
                   className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 transition-colors hover:border-gray-200 active:top-[1px]"
                 >
-                  <Icons.ShareTwitter className="w-6 flex-shrink-0 text-gray-200 transition-all group-hover:text-green-400" />
+                  <Icons.Share className="w-5 flex-shrink-0 -translate-x-0.5 text-gray-50 transition-all group-hover:text-green-400" />
                 </a>
 
                 <a
                   href="#"
                   className="group relative flex w-12 flex-col items-center justify-center space-y-2 rounded-full border border-gray-500 py-3 transition-colors hover:border-gray-200 active:top-[1px]"
                 >
-                  <Icons.Heart className="w-5 flex-shrink-0 text-gray-200 transition-all group-hover:text-green-400" />
+                  <Icons.Heart className="w-5 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
                   <div className="text-lg font-bold leading-none">
                     {/* {article._count.likes} */}0
                   </div>

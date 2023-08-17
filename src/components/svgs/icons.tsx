@@ -7,8 +7,8 @@ export const Instagram = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Github
 export const Github = ({ className }: { className?: string }) => {
@@ -19,8 +19,8 @@ export const Github = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // X
 export const X = ({ className }: { className?: string }) => {
@@ -31,8 +31,8 @@ export const X = ({ className }: { className?: string }) => {
         fill="currentColor"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
 // Email
 export const Email = ({ className }: { className?: string }) => {
@@ -47,8 +47,8 @@ export const Email = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Labs
 export const Labs = ({ className }: { className?: string }) => {
@@ -61,8 +61,8 @@ export const Labs = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Fire
 export const Fire = ({ className }: { className?: string }) => {
@@ -75,8 +75,8 @@ export const Fire = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Bookmark
 export const Bookmark = ({ className }: { className?: string }) => {
@@ -89,8 +89,8 @@ export const Bookmark = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Suitcase
 export const Suitcase = ({ className }: { className?: string }) => {
@@ -107,8 +107,8 @@ export const Suitcase = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Photo
 export const Photo = ({ className }: { className?: string }) => {
@@ -121,8 +121,8 @@ export const Photo = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Arrow
 export const Arrow = ({ className }: { className?: string }) => {
@@ -136,8 +136,49 @@ export const Arrow = ({ className }: { className?: string }) => {
         strokeLinejoin="round"
       />
     </svg>
-  );
-};
+  )
+}
+
+// Arrow right
+export const ArrowRight = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="3"
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+      />
+    </svg>
+  )
+}
+
+// Arrow left
+export const ArrowLeft = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="3"
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        transform="scale(-1, 1) translate(-24, 0)"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+      />
+    </svg>
+  )
+}
 
 // Spotify
 export const Spotify = ({ className }: { className?: string }) => {
@@ -148,8 +189,8 @@ export const Spotify = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Chat chin
 export const ChatChin = ({ className }: { className?: string }) => {
@@ -160,8 +201,8 @@ export const ChatChin = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Share on Twitter
 export const ShareTwitter = ({ className }: { className?: string }) => {
@@ -174,8 +215,28 @@ export const ShareTwitter = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
+
+// Share
+export const Share = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      width="25"
+      height="30"
+      viewBox="0 0 25 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M17 6.99999L7 13.8M8.0543 16.9169L17 23M9 15C9 16.933 7.433 18.5 5.5 18.5C3.567 18.5 2 16.933 2 15C2 13.067 3.567 11.5 5.5 11.5C7.433 11.5 9 13.067 9 15ZM23 5.5C23 7.433 21.433 9 19.5 9C17.567 9 16 7.433 16 5.5C16 3.567 17.567 2 19.5 2C21.433 2 23 3.567 23 5.5ZM23 24.5C23 26.433 21.433 28 19.5 28C17.567 28 16 26.433 16 24.5C16 22.567 17.567 21 19.5 21C21.433 21 23 22.567 23 24.5Z"
+        stroke="currentColor"
+        stroke-width="2.5"
+      />
+    </svg>
+  )
+}
 
 // Heart
 export const Heart = ({ className }: { className?: string }) => {
@@ -186,8 +247,8 @@ export const Heart = ({ className }: { className?: string }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
 const Icons = {
   Github,
@@ -199,11 +260,14 @@ const Icons = {
   Suitcase,
   Photo,
   Arrow,
+  ArrowRight,
+  ArrowLeft,
   Spotify,
   ChatChin,
   Instagram,
   ShareTwitter,
+  Share,
   Heart,
-};
+}
 
-export default Icons;
+export default Icons

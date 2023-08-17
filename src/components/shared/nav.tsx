@@ -1,16 +1,11 @@
-'use client'
-
-import { usePathname } from 'next/navigation'
-
-import NavLink from '@/components/shared/nav-link'
 import Logo from '@/components/svgs/logo'
 import Icons from '@/components/svgs/icons'
 import { generateGreeting } from '@/utils/helpers'
+import Social from '@/components/shared/social'
+import Link from 'next/link'
 
 // Nav component
 export default function Nav() {
-  const pathname = usePathname()
-
   return (
     <>
       {/* Top Bar */}
@@ -40,20 +35,23 @@ export default function Nav() {
             </div>
           </div>
 
-          <div className="flex flex-1 items-center justify-end space-x-3 border-r border-gray-500 pr-10">
-            <NavLink
-              title="Articles"
-              link="/articles"
-              icon={Icons.Bookmark}
-              isActive={pathname.startsWith('/articles')}
-            />
-            <NavLink
-              title="Experiments"
-              link="/experiments"
-              icon={Icons.Labs}
-            />
-            <NavLink title="Projects" link="/projects" icon={Icons.Fire} />
-            {/* <NavLink title="Work" link="/work" icon={Icons.Suitcase} /> */}
+          <div className="flex flex-1 items-center justify-end border-r border-gray-500 pr-6">
+            <Link
+              href="/articles"
+              className="group relative flex items-center rounded-full border border-gray-500 px-4 py-2 transition-colors hover:border-gray-200 active:top-[1px]"
+            >
+              <>
+                <Icons.ArrowLeft className="mr-3 h-4 text-gray-200 transition-all group-hover:mr-4 group-hover:text-green-400" />
+                <div className="text-sm font-bold uppercase tracking-wide text-white">
+                  All articles
+                </div>
+              </>
+            </Link>
+
+            {/* Divider */}
+            <div className="mx-6 h-full w-[1px] bg-gray-500"></div>
+
+            <Social />
           </div>
         </div>
       </header>

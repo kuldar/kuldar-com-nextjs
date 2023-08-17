@@ -8,7 +8,7 @@ export default function Header() {
     <>
       {/* Top bar */}
       <div className="border-b border-gray-500">
-        <div className="mx-auto grid h-4 max-w-8xl grid-cols-12 px-4 xs:h-16 xs:px-10">
+        <div className="mx-auto grid h-2 max-w-8xl grid-cols-12 px-2 xs:h-6 xs:px-6 sm:h-16 sm:px-10">
           <div className="col-span-10 border-x border-gray-500 md:col-span-4"></div>
           <div className="col-span-2 border-r border-gray-500 min-[896px]:col-span-3"></div>
           <div className="col-span-1 hidden border-r border-gray-500 lg:block"></div>
@@ -18,7 +18,7 @@ export default function Header() {
 
       {/* Header */}
       <header className="border-b border-gray-500">
-        <div className="mx-auto grid max-w-8xl grid-cols-12 px-4 xs:px-10">
+        <div className="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
           {/* H1 */}
           <div className="col-span-10 border-x border-gray-500 p-10 md:col-span-4">
             <div className="relative w-fit">

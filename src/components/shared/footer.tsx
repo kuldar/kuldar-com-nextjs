@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <>
       <footer className="border-b border-gray-500">
-        <div className="mx-auto max-w-8xl px-4 xs:px-10">
+        <div className="mx-auto max-w-8xl px-2 xs:px-6 sm:px-10">
           <div className="border-x border-gray-500 p-8 xs:p-20">
             <div className="text-center">
               <div className="mb-2 text-gray-50">
@@ -32,8 +32,8 @@ export default function Footer() {
       </footer>
 
       {/* Bottom bar */}
-      <div className="mx-auto max-w-8xl px-4 xs:px-10">
-        <div className="h-4 border-x border-gray-500 xs:h-16"></div>
+      <div className="mx-auto max-w-8xl px-2 xs:px-6 sm:px-10">
+        <div className="h-2 border-x border-gray-500 xs:h-6 sm:h-16"></div>
       </div>
     </>
   )

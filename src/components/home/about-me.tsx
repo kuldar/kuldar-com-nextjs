@@ -1,29 +1,30 @@
-import Signature from "@/components/svgs/signature";
-import Icons from "@/components/svgs/icons";
+import Signature from '@/components/svgs/signature'
+import Social from '@/components/shared/social'
+// import Icons from '@/components/svgs/icons'
 
-// Social links
-export const links = [
-  {
-    name: "X",
-    link: "https://twitter.com/kkuldar",
-    icon: Icons.X,
-  },
-  {
-    name: "Instagram",
-    link: "https://instagram.com/kkkuldar",
-    icon: Icons.Instagram,
-  },
-  {
-    name: "Github",
-    link: "https://github.com/kuldar",
-    icon: Icons.Github,
-  },
-  {
-    name: "Email",
-    link: "mailto:email@kuldar.com",
-    icon: Icons.Email,
-  },
-];
+// // Social links
+// export const links = [
+//   {
+//     name: "X",
+//     link: "https://twitter.com/kkuldar",
+//     icon: Icons.X,
+//   },
+//   {
+//     name: "Instagram",
+//     link: "https://instagram.com/kkkuldar",
+//     icon: Icons.Instagram,
+//   },
+//   {
+//     name: "Github",
+//     link: "https://github.com/kuldar",
+//     icon: Icons.Github,
+//   },
+//   {
+//     name: "Email",
+//     link: "mailto:email@kuldar.com",
+//     icon: Icons.Email,
+//   },
+// ];
 
 // About component
 export default function AboutMe() {
@@ -38,7 +39,7 @@ export default function AboutMe() {
             building all sorts of interesting and dumb ideas.
           </p>
           <p>
-            I like to{" "}
+            I like to{' '}
             <a
               target="_blank"
               href="https://www.instagram.com/kkkuldar/"
@@ -46,14 +47,14 @@ export default function AboutMe() {
             >
               play with cameras
             </a>
-            , nerd over cool{" "}
+            , nerd over cool{' '}
             <a
               target="_blank"
               href="https://www.youtube.com/watch?v=TeVbYCIFVa8"
               className="text-white underline decoration-green-400"
             >
               space rockets
-            </a>{" "}
+            </a>{' '}
             and learn more about math and artificial intelligence.
           </p>
         </div>
@@ -66,20 +67,8 @@ export default function AboutMe() {
         <div className="mb-4 text-sm font-bold uppercase">Find me at</div>
 
         {/* Icons */}
-        <div className="flex justify-end space-x-2">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              title={link.name}
-              href={link.link}
-              target="_blank"
-              className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 transition-colors hover:border-gray-200 active:top-[1px]"
-            >
-              <link.icon className="w-5 flex-shrink-0 transition-all group-hover:text-green-400" />
-            </a>
-          ))}
-        </div>
+        <Social />
       </div>
     </div>
-  );
+  )
 }
