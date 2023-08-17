@@ -2,18 +2,18 @@ import SectionTitle from '@/components/shared/section-title'
 import Icons from '@/components/svgs/icons'
 import { ButtonSmall } from '@/components/shared/buttons'
 
-import type { Article } from '@/utils/get-all-articles'
+import { getRecentArticles } from '@/utils/get-all-articles'
 
-export default function Articles({
-  latestArticle,
-  moreArticles,
-}: {
-  latestArticle: Article
-  moreArticles: Article[]
-}) {
+// Articles
+export default async function Articles() {
+  // Get recent articles
+  let articles = await getRecentArticles()
+  let latestArticle = articles[0]
+  let moreArticles = articles.slice(1)
+
   return (
-    <div className="relative col-span-12 border-r border-gray-500 lg:col-span-7 xl:col-span-8">
-      <div className="border-y border-l border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-6 pr-0 xs:p-10 lg:border-l-0 lg:border-t-0">
+    <div className="relative order-1 col-span-12 border-r border-gray-500 lg:order-2 lg:col-span-7 xl:col-span-8">
+      <div className="border-l border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-6 pr-0 xs:p-10 lg:border-l-0">
         {/* Posts */}
         <div className="flex flex-col sm:flex-row">
           {/* Latest post */}

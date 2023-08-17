@@ -1,19 +1,60 @@
+import CompanyLogos from '@/components/svgs/company-logos'
+
+// Projects
+export const companies = [
+  {
+    name: 'Synack',
+    link: 'https://www.synack.com/',
+    logo: <CompanyLogos.Synack className="h-9 w-auto" />,
+  },
+  {
+    name: 'Pento',
+    link: 'https://www.pento.io/',
+    logo: <CompanyLogos.Pento className="h-11 w-auto" />,
+  },
+  {
+    name: 'Prisma',
+    link: 'https://www.prisma.io/',
+    logo: <CompanyLogos.Prisma className="h-10 w-auto" />,
+  },
+  {
+    name: 'Checkr',
+    link: 'https://checkr.com/',
+    logo: <CompanyLogos.Checkr className="h-6 w-auto" />,
+  },
+  {
+    name: 'Bonusly',
+    link: 'https://bonusly.com/',
+    logo: <CompanyLogos.Bonusly className="h-10 w-auto" />,
+  },
+  {
+    name: 'Fraktal',
+    link: 'https://fraktal.co/',
+    logo: <CompanyLogos.Fraktal className="h-12 w-auto" />,
+  },
+]
+
 // Companies
 export default function Companies() {
   return (
-    <div className="col-span-12 flex flex-col-reverse border-x border-gray-500 lg:col-span-5 lg:flex-col xl:col-span-4">
-      <div className="relative flex h-64 flex-1 items-center justify-center border-b border-t-0 border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 px-8 py-12 text-center before:absolute before:-top-[1px] before:right-0 before:-z-10 before:h-[1px] before:w-[100vw] before:bg-gray-500 before:content-[''] lg:border-b-0">
-        <div className="max-w-sm space-y-4 text-lg leading-snug">
-          <p>
-            Have an interesting, stupid or crazy idea you&#39;d like some help
-            building?
-          </p>
-          <a
-            href="mailto:email@kuldar.com"
-            className="inline-block font-bold underline decoration-green-400"
-          >
-            Let&#39;s talk.
-          </a>
+    <div className="order-2 col-span-12 flex flex-col-reverse border-x border-gray-500 lg:order-1 lg:col-span-5 lg:flex-col xl:col-span-4">
+      <div className="flex h-64 flex-1 flex-col items-center justify-center border-t border-gray-500 px-8 py-8 text-center lg:border-t-0">
+        <div className="mb-4 text-lg font-bold leading-snug">
+          Companies{' '}
+          <span className="inline lg:block">I&#39;ve worked with</span>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 p-4">
+          {companies.map((company) => (
+            <a
+              key={company.name}
+              href={company.link}
+              target="_blank"
+              className="text-gray-200 transition-colors hover:text-gray-30"
+            >
+              {company.logo}
+            </a>
+          ))}
         </div>
       </div>
     </div>

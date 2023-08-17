@@ -53,7 +53,7 @@ export default function Nav() {
               icon={Icons.Labs}
             />
             <NavLink title="Projects" link="/projects" icon={Icons.Fire} />
-            <NavLink title="Work" link="/work" icon={Icons.Suitcase} />
+            {/* <NavLink title="Work" link="/work" icon={Icons.Suitcase} /> */}
           </div>
         </div>
       </header>
