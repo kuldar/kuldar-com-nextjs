@@ -23,10 +23,10 @@ export default function Header() {
           <div className="col-span-10 border-x border-gray-500 p-10 md:col-span-4">
             <div className="relative w-fit">
               {/* Logo */}
-              <Logo className="h-16 min-[896px]:h-24 xl:h-32" />
+              <Logo className="h-10 md:h-16 min-[896px]:h-24 xl:h-32" />
 
               {/* Greeting */}
-              <div className="absolute right-0 top-0 hidden -translate-y-14 translate-x-12 rounded-full bg-green-500 px-4 py-3 text-lg font-bold leading-none text-gray-1000 xs:inline-block lg:translate-x-full lg:translate-y-0">
+              <div className="absolute right-0 top-0 hidden -translate-y-14 translate-x-24 rounded-full bg-green-500 px-4 py-3 text-lg font-bold leading-none text-gray-1000 xs:inline-block md:translate-x-full lg:translate-y-0">
                 <span className="inline-block">{generateGreeting()}</span>
                 <Icons.ChatChin className="absolute -bottom-[9px] left-[7px] w-5 text-green-500" />
               </div>
@@ -34,10 +34,10 @@ export default function Header() {
           </div>
 
           <div className="col-span-2 border-r border-gray-500 min-[896px]:col-span-3"></div>
-          <div className="col-span-2 block border-r border-t border-gray-500 max-md:order-last md:hidden lg:col-span-1 lg:block lg:border-t-0"></div>
+          <div className="col-span-2 hidden border-r border-t border-gray-500 max-md:order-last lg:col-span-1 lg:block lg:border-t-0"></div>
 
           {/* Jams */}
-          <div className="col-span-10 flex flex-col items-end justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 text-right md:col-span-6 md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4">
+          <div className="col-span-10 hidden flex-col items-end justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 text-right md:col-span-6 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4">
             <div className="mb-4 text-sm font-bold uppercase">Current jam</div>
 
             <a
