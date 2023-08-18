@@ -36,9 +36,21 @@ export default function Header() {
           <div className="col-span-2 border-r border-gray-500 min-[896px]:col-span-3"></div>
           <div className="col-span-2 block border-r border-t border-gray-500 max-md:order-last md:hidden lg:col-span-1 lg:block lg:border-t-0"></div>
 
-          {/* Listening activity */}
-          <div className="col-span-10 flex flex-col items-start justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 md:col-span-6 md:items-end md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4">
-            {/* <Radio radio={radio} /> */}
+          {/* Jams */}
+          <div className="col-span-10 flex flex-col items-end justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 text-right md:col-span-6 md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4">
+            <div className="mb-4 text-sm font-bold uppercase">Current jam</div>
+
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=lQEPtMzd_jo&list=PL1qzr6CyLh5c3ppjZ9QmEVmTCJWoVoDPK"
+              className="flex max-w-full items-center justify-end space-x-3 rounded-full border border-gray-500 py-1.5 pl-4 pr-3 text-gray-50 transition-colors hover:border-gray-200 hover:text-white"
+            >
+              <div className="w-full overflow-hidden whitespace-nowrap text-lg">
+                Global Underground Select 6
+              </div>
+
+              <Icons.Youtube className="h-5 w-5 flex-shrink-0 animate-spin-slow text-red-600" />
+            </a>
           </div>
         </div>
       </header>

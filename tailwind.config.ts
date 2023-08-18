@@ -56,6 +56,9 @@ const config: Config = {
     fontFamily: {
       sans: ['var(--font-satoshi)', 'sans-serif'],
     },
+    animation: {
+      'spin-slow': 'spin 3s linear infinite',
+    },
   },
   plugins: [],
 }
