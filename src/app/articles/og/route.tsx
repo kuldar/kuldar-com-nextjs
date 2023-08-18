@@ -34,14 +34,14 @@ export async function GET(request: Request) {
               'linear-gradient(to bottom right, #13171D, #050608)',
           }}
         >
-          <div tw="flex items-center px-10 h-10 border-b-4 border-gray-700/60">
+          <div tw="flex items-center pl-10 pr-30 h-10 border-b-4 border-gray-700/60">
             <div tw="border-l-4 border-r-4 w-full h-10 border-gray-700/60"></div>
           </div>
 
-          <div tw="flex flex-1 px-10">
+          <div tw="flex flex-1 pl-10 pr-30">
             <div tw="flex flex-col justify-center w-full pl-20 pr-20 pt-14 pb-14 border-l-4 border-r-4 border-gray-700/60">
               <h1
-                tw="text-7xl text-white tracking-tight max-w-2/3"
+                tw="text-7xl text-white tracking-tight max-w-3/4"
                 style={{ fontFamily: 'Satoshi Bold' }}
               >
                 {title}
@@ -67,7 +67,7 @@ export async function GET(request: Request) {
             </div>
           </div>
 
-          <div tw="flex items-center px-10 h-10 border-t-4 border-gray-700/60">
+          <div tw="flex items-center pl-10 pr-30 h-10 border-t-4 border-gray-700/60">
             <div tw="border-l-4 border-r-4 w-full h-10 border-gray-700/60"></div>
           </div>
         </div>
