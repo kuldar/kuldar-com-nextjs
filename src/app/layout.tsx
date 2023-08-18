@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: meta.website.url,
     siteName: meta.name,
-    // images: '/og-image.png',
+    images: '/og',
     locale: 'en_US',
     type: 'website',
   },
