@@ -12,50 +12,22 @@ const NewsletterForm = () => {
         </div>
       </div>
 
-      {/* <form
-        action="#"
-        className="flex items-center rounded-2xl border border-gray-500 bg-gray-1000"
-      >
-        <label htmlFor="email" className="sr-only">
-          Email address
-        </label>
-        <input
-          className="h-16 w-full flex-1 bg-transparent pl-6 text-lg outline-none placeholder:text-gray-200"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="your@email.com"
-        />
-        <button
-          className="group/button mr-3.5 inline-flex h-9 items-center space-x-2 rounded-lg border border-gray-500 px-2.5 py-2 transition-colors hover:border-gray-200 active:translate-y-[1px]"
-          type="submit"
-        >
-          <div className="text-sm font-bold leading-none text-white">
-            Stay up to date
-          </div>
-        </button>
-      </form> */}
-
       <form
         className="flex items-center rounded-2xl border border-gray-500 bg-gray-1000"
-        action="https://tinyletter.com/kuldar"
+        action="https://buttondown.email/api/emails/embed-subscribe/kuldar"
         method="post"
         target="popupwindow"
         onSubmit={() =>
-          window.open(
-            'https://tinyletter.com/kuldar',
-            'popupwindow',
-            'scrollbars=yes,width=800,height=600'
-          )
+          window.open('https://buttondown.email/kuldar', 'popupwindow')
         }
       >
         <input
           type="email"
           name="email"
-          id="tlemail"
+          id="bd-email"
+          placeholder="your@email.com"
           className="h-16 w-full flex-1 bg-transparent pl-6 text-lg outline-none placeholder:text-gray-200"
         />
-        <input type="hidden" value="1" name="embed" />
         <button
           className="group/button mr-3.5 inline-flex h-9 items-center space-x-2 rounded-lg border border-gray-500 px-2.5 py-2 transition-colors hover:border-gray-200 active:translate-y-[1px]"
           type="submit"
