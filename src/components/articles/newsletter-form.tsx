@@ -4,7 +4,7 @@ import { Plane } from '@/components/svgs/icons'
 // Newsletter form
 const NewsletterForm = () => {
   return (
-    <div className="mb-4 space-y-4 sm:mb-12 min-[1150px]:mb-0">
+    <div className="mb-5 space-y-4">
       <div className="flex items-center space-x-3">
         <Plane className="h-4 text-gray-100" />
         <div className="text-sm font-bold uppercase tracking-wide text-gray-100">

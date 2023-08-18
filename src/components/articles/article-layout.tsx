@@ -84,8 +84,8 @@ export const ArticleLayout = async ({ children, article }: any) => {
 
           {/* Narrow section */}
           <div className="col-span-12 flex flex-col-reverse border-x border-gray-500 lg:flex-col min-[1150px]:col-span-4">
-            <div className="border-b-0 border-t border-gray-500 bg-center px-8 py-8 sm:py-16 min-[1150px]:border-b min-[1150px]:border-t-0 min-[1150px]:bg-dotted min-[1150px]:py-8">
-              <div className="mx-auto flex max-w-lg flex-col space-y-5 border-b-0 min-[1150px]:mx-0 min-[1150px]:max-w-none">
+            <div className="border-b-0 border-t border-gray-500 bg-center p-8 min-[1150px]:border-b min-[1150px]:border-t-0 min-[1150px]:bg-dotted min-[1150px]:py-8">
+              <div>
                 <NewsletterForm />
                 <RecentArticles />
               </div>
