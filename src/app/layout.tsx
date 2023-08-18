@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 // Metadata
 export const metadata: Metadata = {
   metadataBase: new URL(meta.website.url),
-  title: meta.website.description,
+  title: meta.website.title,
   description: meta.website.description,
   openGraph: {
     url: meta.website.url,
