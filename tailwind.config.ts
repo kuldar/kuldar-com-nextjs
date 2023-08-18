@@ -54,7 +54,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ['Satoshi', 'sans-serif'],
+      sans: ['var(--font-satoshi)', 'sans-serif'],
     },
   },
   plugins: [],
