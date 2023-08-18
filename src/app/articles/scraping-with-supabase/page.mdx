@@ -14,7 +14,7 @@ export const metadata = {
   description: article.description,
   authors: [{ name: meta.name }],
   openGraph: {
-    images: meta.website.url + '/articles/og',
+    images: meta.website.url + '/articles/og?title=' + encodeURI(article.title),
     type: 'article',
   },
 }

@@ -49,7 +49,7 @@ export async function GET(request: Request) {
 
               <div tw="flex items-center border-t-4 border-gray-700/40 mt-8 pt-8">
                 <img
-                  src="http://localhost:3000/avatar.jpg"
+                  src="https://kuldar.com/avatar.jpg"
                   title="Kuldar Kalvik"
                   width="80px"
                   height="80px"
