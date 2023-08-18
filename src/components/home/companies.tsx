@@ -50,7 +50,7 @@ export default function Companies() {
               key={company.name}
               href={company.link}
               target="_blank"
-              className="text-gray-200 transition-colors hover:text-gray-30"
+              className="text-gray-200 transition-colors hover:text-gray-30 active:translate-y-[1px]"
             >
               {company.logo}
             </a>

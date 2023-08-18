@@ -12,8 +12,8 @@ export default async function Articles() {
   let moreArticles = articles.slice(1)
 
   return (
-    <div className="relative order-1 col-span-12 border-r border-gray-500 lg:order-2 lg:col-span-7 xl:col-span-8">
-      <div className="border-l border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-6 pr-0 xs:p-10 lg:border-l-0">
+    <div className="relative order-1 col-span-12 border-r border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 lg:order-2 lg:col-span-7 xl:col-span-8">
+      <div className="border-l border-gray-500 bg-gray-1000/20 p-6 pr-0 transition-colors hover:bg-transparent xs:p-10 lg:border-l-0">
         {/* Posts */}
         <div className="flex flex-col sm:flex-row">
           {/* Latest post */}
@@ -21,13 +21,13 @@ export default async function Articles() {
             {/* Title */}
             <SectionTitle title="Articles" icon={Icons.Bookmark} />
 
-            <div className="flex-1">
-              <a
-                href={`/articles/${latestArticle.slug}`}
-                className="mt-6 inline-block text-3xl font-bold leading-tight"
-              >
+            <a
+              href={`/articles/${latestArticle.slug}`}
+              className="flex-1 active:translate-y-[1px]"
+            >
+              <div className="mt-6 inline-block text-3xl font-bold leading-tight">
                 {latestArticle.title}
-              </a>
+              </div>
               {/* <div className="my-4 leading-snug text-gray-50">
                       {formatDate(
                         latestArticle.createdAt
@@ -38,7 +38,7 @@ export default async function Articles() {
               <div className="mb-8 mt-6 text-lg text-gray-50">
                 {latestArticle.description}
               </div>
-            </div>
+            </a>
 
             {/* Buttons */}
             <div className="flex items-center gap-4">
@@ -56,7 +56,7 @@ export default async function Articles() {
               <div key={i} className="py-4 pr-10">
                 <a
                   href={`/articles/${article.slug}`}
-                  className="group inline-block max-w-xs"
+                  className="group inline-block max-w-xs active:translate-y-[1px]"
                 >
                   <span className="text-lg text-gray-50 transition-colors group-hover:text-white">
                     {article.title.substring(0, article.title.lastIndexOf(' '))}{' '}
