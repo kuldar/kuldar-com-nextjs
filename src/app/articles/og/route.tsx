@@ -31,7 +31,7 @@ export async function GET(request: Request) {
             backgroundColor: '#050608',
             fontFamily: '"Satoshi"',
             backgroundImage:
-              'linear-gradient(to bottom right, #13171D, #050608)',
+              'linear-gradient(to bottom right, #1A2028, #050608)',
           }}
         >
           <div tw="flex items-center pl-10 pr-30 h-10 border-b-4 border-gray-700/60">
