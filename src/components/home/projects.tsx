@@ -41,16 +41,12 @@ export default function Projects() {
             key={project.name}
             href={project.link}
             target="_blank"
-            className={`group/card relative col-span-6 overflow-hidden rounded-2xl border-t border-gray-50/20 bg-gradient-to-br from-gray-950 to-gray-800 p-8 active:top-[1px] ${
-              i + 1 === projects.length ? 'md:col-span-6' : 'md:col-span-3'
-            } lg:col-span-2`}
+            className="group/card relative col-span-6 overflow-hidden rounded-2xl border-t border-gray-50/20 bg-gradient-to-br from-gray-1000 via-gray-800 to-gray-950 active:top-[1px] md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2"
           >
-            <project.illustration
-              className={`absolute text-gray-600/80 duration-300 group-hover/card:text-gray-500`}
-            />
+            <project.illustration className="absolute text-gray-500/80" />
 
             {/* Content */}
-            <div className="relative flex h-full flex-col items-start">
+            <div className="relative flex h-full flex-col items-start bg-gray-950/50 p-8 transition-colors group-hover/card:bg-transparent">
               <h2 className="text-5xl font-bold tracking-snug">
                 {project.name}
               </h2>
