@@ -2,11 +2,10 @@ import { ArticleLayout } from '@/components/articles/article-layout'
 import meta from '@/utils/meta'
 
 export const article = {
-  author: 'Kuldar Kalvik',
-  date: '2023-08-07',
   title: 'UI Experiments with SwiftUI',
   description:
     'A look at the new SwiftUI framework and how it can be used to build a simple UI.',
+  date: '2023-08-07',
 }
 
 export const metadata = {
@@ -14,7 +13,10 @@ export const metadata = {
   description: article.description,
   authors: [{ name: meta.name }],
   openGraph: {
-    images: meta.website.url + '/articles/og',
+    url: meta.website.url,
+    title: article.title,
+    description: article.description,
+    images: meta.website.url + '/articles/og?title=' + encodeURI(article.title),
     type: 'article',
   },
 }

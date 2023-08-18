@@ -2,11 +2,10 @@ import { ArticleLayout } from '@/components/articles/article-layout'
 import meta from '@/utils/meta'
 
 export const article = {
-  author: 'Kuldar Kalvik',
-  date: '2023-08-08',
   title: 'Scraping the web with Supabase Edge Functions',
   description:
     'Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still.',
+  date: '2023-08-08',
 }
 
 export const metadata = {
@@ -14,6 +13,9 @@ export const metadata = {
   description: article.description,
   authors: [{ name: meta.name }],
   openGraph: {
+    url: meta.website.url,
+    title: article.title,
+    description: article.description,
     images: meta.website.url + '/articles/og?title=' + encodeURI(article.title),
     type: 'article',
   },

@@ -2,11 +2,10 @@ import { ArticleLayout } from '@/components/articles/article-layout'
 import meta from '@/utils/meta'
 
 export const article = {
-  author: 'Kuldar Kalvik',
-  date: '2023-08-07',
   title: 'Interactive Illustrations with Framer Motion',
   description:
     'Lorem markdownum, bracchia in redibam! Terque unda puppi nec, linguae posterior in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite variatus, redolentia adeunt. Tyrioque dies, naufraga sua adit partibus celanda torquere temptata, erit maneat et ramos, iam ait dominari potitus! Tibi litora matremque fumantia condi radicibus opusque.',
+  date: '2023-08-07',
 }
 
 export const metadata = {
@@ -14,7 +13,10 @@ export const metadata = {
   description: article.description,
   authors: [{ name: meta.name }],
   openGraph: {
-    images: meta.website.url + '/articles/og',
+    url: meta.website.url,
+    title: article.title,
+    description: article.description,
+    images: meta.website.url + '/articles/og?title=' + encodeURI(article.title),
     type: 'article',
   },
 }
