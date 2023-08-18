@@ -1,15 +1,20 @@
 import { ArticleLayout } from '@/components/articles/article-layout'
+import meta from '@/utils/meta'
 
 export const article = {
-  author: 'Kuldar Kalvik',
-  date: '2023-08-07',
   title: 'Build Components with Radix UI and Tailwind CSS',
   description: 'A guide to building components with Radix UI and Tailwind CSS',
+  date: '2023-08-07',
 }
 
 export const metadata = {
   title: article.title,
   description: article.description,
+  authors: [{ name: meta.name }],
+  openGraph: {
+    images: meta.website.url + '/articles/og',
+    type: 'article',
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />

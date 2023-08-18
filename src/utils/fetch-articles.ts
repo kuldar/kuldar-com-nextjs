@@ -12,7 +12,7 @@ type ArticleMeta = {
 export type Article = MDXModule & ArticleMeta
 
 // Import article
-async function importArticle(articleFilename: string): Promise<Article> {
+export async function importArticle(articleFilename: string): Promise<Article> {
   let { article } = (await import(`../app/articles/${articleFilename}`)) as {
     article: Article
   }

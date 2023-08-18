@@ -1,21 +1,27 @@
 import './globals.css'
 import localFont from 'next/font/local'
+import meta from '@/utils/meta'
 
 import type { Metadata } from 'next'
 
 // Metadata
 export const metadata: Metadata = {
-  title: 'Kuldar Kalvik',
-  description:
-    'My little corner of the web. Work, projects and random thoughts.',
+  metadataBase: new URL(meta.website.url),
+  title: meta.website.description,
+  description: meta.website.description,
+  openGraph: {
+    url: meta.website.url,
+    siteName: meta.name,
+    images: '/og-image.png',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@kkuldar',
+    creator: '@kkuldar',
+  },
 }
-
-// // Satoshi
-// const ssatoshi = localFont({
-//   src: '../fonts/Satoshi-Variable.woff2',
-//   display: 'swap',
-//   variable: '--font-satoshi',
-// })
 
 const satoshi = localFont({
   src: [

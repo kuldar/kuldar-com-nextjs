@@ -1,4 +1,5 @@
 import { ArticleLayout } from '@/components/articles/article-layout'
+import meta from '@/utils/meta'
 
 export const article = {
   author: 'Kuldar Kalvik',
@@ -11,6 +12,11 @@ export const article = {
 export const metadata = {
   title: article.title,
   description: article.description,
+  authors: [{ name: meta.name }],
+  openGraph: {
+    images: meta.website.url + '/articles/og',
+    type: 'article',
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
