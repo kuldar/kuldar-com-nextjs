@@ -17,14 +17,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="mx-auto max-w-2xl text-gray-400">
-                The code for this website is{' '}
-                <a
-                  href="https://github.com/kuldar/kuldar-com"
-                  className="inline-block underline"
-                >
-                  open-source
-                </a>
-                , feel free to poke around.
+                ${new Date().getFullYear()} &copy; Kuldar Kalvik
               </div>
             </div>
           </div>
