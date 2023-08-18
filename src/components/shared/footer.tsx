@@ -17,7 +17,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="mx-auto max-w-2xl text-gray-400">
-                ${new Date().getFullYear()} &copy; Kuldar Kalvik
+                {new Date().getFullYear()} &copy; Kuldar Kalvik
               </div>
             </div>
           </div>
