@@ -1,34 +1,13 @@
-import NewsletterForm from '@/components/articles/newsletter-form'
-import RecentArticles from '@/components/articles/recent-articles'
-import Footer from '@/components/shared/footer'
 import Nav from '@/components/shared/nav'
 import Icons from '@/components/svgs/icons'
-import { getAllArticles } from '@/utils/fetch-articles'
-import { Article as ArticleType } from '@/utils/fetch-articles'
+import Footer from '@/components/shared/footer'
+import NewsletterForm from '@/components/articles/newsletter-form'
+// import RecentArticles from '@/components/articles/recent-articles'
+
 import { formatDate } from '@/utils/helpers'
 
-// export const metadata = {
-//   title: 'Articles',
-// }
-
-// Article
-function Article({ article }: { article: ArticleType }) {
-  return (
-    <article>
-      <div>
-        <h2 className="text-2xl font-bold tracking-snug">
-          <a href={`/articles/${article.slug}`}>{article.title}</a>
-        </h2>
-        <div>{article.date}</div>
-        <div>{article.description}</div>
-      </div>
-    </article>
-  )
-}
-
-export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
-
+// Work layout
+export const WorkLayout = async ({ children, work }: any) => {
   return (
     <div>
       <Nav />
@@ -55,7 +34,7 @@ export default async function ArticlesIndex() {
                 >
                   <Icons.Heart className="w-5 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
                   <div className="text-lg font-bold leading-none">
-                    {/* {article._count.likes} */}0
+                    {/* {work._count.likes} */}0
                   </div>
                 </a>
               </div>
@@ -70,7 +49,7 @@ export default async function ArticlesIndex() {
                   >
                     <Icons.Heart className="w-4 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
                     <div className="text-lg font-bold leading-none">
-                      {/* {article._count.likes} */}0
+                      {/* {work._count.likes} */}0
                     </div>
                   </a>
 
@@ -83,9 +62,11 @@ export default async function ArticlesIndex() {
                 </div>
 
                 <h1 className="text-4xl font-bold leading-[110%] tracking-snug xs:text-5xl">
-                  Bla Bla
+                  {work.title}
                 </h1>
-                <div className="mt-4 text-lg text-gray-100">bla</div>
+                <div className="mt-4 text-lg text-gray-100">
+                  {formatDate(work.date)}
+                </div>
               </div>
             </div>
 
@@ -96,9 +77,7 @@ export default async function ArticlesIndex() {
 
               {/* Main content */}
               <div className="flex-1 overflow-auto p-6 xs:p-10 min-[900px]:p-16">
-                {articles.map((article) => (
-                  <Article key={article.slug} article={article} />
-                ))}
+                {children}
               </div>
             </div>
           </div>
@@ -108,7 +87,7 @@ export default async function ArticlesIndex() {
             <div className="border-b-0 border-t border-gray-500 bg-center p-6 xs:p-8 min-[1150px]:border-b min-[1150px]:border-t-0 min-[1150px]:bg-dotted min-[1150px]:py-8">
               <div>
                 <NewsletterForm />
-                <RecentArticles />
+                {/* <RecentArticles /> */}
               </div>
             </div>
           </div>

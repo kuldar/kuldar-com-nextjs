@@ -7,8 +7,10 @@ const meta = {
     url: 'https://kuldar.com',
   },
   social: {
-    twitter: 'kkuldar',
     github: 'kuldar',
+    twitter: 'kkuldar',
+    threads: 'kkkuldar',
+    instagram: 'kkkuldar',
   },
 }
 

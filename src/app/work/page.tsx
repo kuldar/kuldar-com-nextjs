@@ -1,33 +1,34 @@
 import NewsletterForm from '@/components/articles/newsletter-form'
-import RecentArticles from '@/components/articles/recent-articles'
+// import RecentArticles from '@/components/articles/recent-articles'
 import Footer from '@/components/shared/footer'
 import Nav from '@/components/shared/nav'
 import Icons from '@/components/svgs/icons'
-import { getAllArticles } from '@/utils/fetch-articles'
-import { Article as ArticleType } from '@/utils/fetch-articles'
-import { formatDate } from '@/utils/helpers'
+import { getAllWorks } from '@/utils/fetch-works'
+import { Work as WorkType } from '@/utils/fetch-works'
+// import { formatDate } from '@/utils/helpers'
 
 // export const metadata = {
 //   title: 'Articles',
 // }
 
-// Article
-function Article({ article }: { article: ArticleType }) {
+// Work
+function Work({ work }: { work: WorkType }) {
   return (
     <article>
       <div>
         <h2 className="text-2xl font-bold tracking-snug">
-          <a href={`/articles/${article.slug}`}>{article.title}</a>
+          <a href={`/work/${work.slug}`}>{work.title}</a>
         </h2>
-        <div>{article.date}</div>
-        <div>{article.description}</div>
+        <div>{work.date}</div>
+        <div>{work.description}</div>
       </div>
     </article>
   )
 }
 
-export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+// List of works
+export default async function WorkIndex() {
+  let works = await getAllWorks()
 
   return (
     <div>
@@ -96,8 +97,8 @@ export default async function ArticlesIndex() {
 
               {/* Main content */}
               <div className="flex-1 overflow-auto p-6 xs:p-10 min-[900px]:p-16">
-                {articles.map((article) => (
-                  <Article key={article.slug} article={article} />
+                {works.map((work) => (
+                  <Work key={work.slug} work={work} />
                 ))}
               </div>
             </div>
@@ -108,7 +109,7 @@ export default async function ArticlesIndex() {
             <div className="border-b-0 border-t border-gray-500 bg-center p-6 xs:p-8 min-[1150px]:border-b min-[1150px]:border-t-0 min-[1150px]:bg-dotted min-[1150px]:py-8">
               <div>
                 <NewsletterForm />
-                <RecentArticles />
+                {/* <RecentArticles /> */}
               </div>
             </div>
           </div>
