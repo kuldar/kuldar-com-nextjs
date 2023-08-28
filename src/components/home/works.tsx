@@ -2,8 +2,7 @@ import SectionTitle from '@/components/shared/section-title'
 import Illustrations from '@/components/svgs/illustrations'
 import Icons from '@/components/svgs/icons'
 
-// Projects
-export const projects = [
+export const works = [
   {
     name: 'Awesome AI',
     description:
@@ -27,37 +26,35 @@ export const projects = [
   },
 ]
 
-// Projects
-export default function Projects() {
+// Works
+export default function Works() {
   return (
     <div className="col-span-12 border-x border-t border-gray-500 bg-dotted bg-center p-4 xs:p-8">
       {/* Title */}
-      <SectionTitle title="Projects" icon={Icons.Fire} />
+      <SectionTitle title="Work" icon={Icons.Code} />
 
-      {/* List of projects */}
+      {/* List of work */}
       <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-8">
-        {projects.map((project, i) => (
+        {works.map((work) => (
           <a
-            key={project.name}
-            href={project.link}
+            key={work.name}
+            href={work.link}
             target="_blank"
             className="group/card relative col-span-6 overflow-hidden rounded-2xl border-t border-gray-50/20 bg-gradient-to-br from-gray-1000 via-gray-800 to-gray-950 active:top-[1px] md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2"
           >
-            <project.illustration className="absolute text-gray-500/80" />
+            <work.illustration className="absolute text-gray-500/80" />
 
             {/* Content */}
             <div className="relative flex h-full flex-col items-start bg-gray-950/50 p-8 transition-colors group-hover/card:bg-transparent">
-              <h2 className="text-5xl font-bold tracking-snug">
-                {project.name}
-              </h2>
+              <h2 className="text-5xl font-bold tracking-snug">{work.name}</h2>
 
               <div className="mb-10 mt-6 flex-1 space-y-6 pr-4 text-lg leading-normal text-gray-50">
-                {project.description}
+                {work.description}
               </div>
 
               <span className="inline-flex items-center space-x-2 rounded-lg border border-gray-500 bg-gray-900 py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-200">
                 <div className="text-sm font-bold leading-none text-white">
-                  View site
+                  View more
                 </div>
                 <div className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/card:border-green-400 group-hover/card:bg-green-400">
                   <Icons.Arrow className="h-2 w-2 text-white transition-colors group-hover/card:text-gray-1000" />

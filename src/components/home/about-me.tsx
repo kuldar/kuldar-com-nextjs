@@ -59,7 +59,7 @@ export default function AboutMe() {
           </p>
         </div>
 
-        <Signature className="mt-6 h-10" />
+        <Signature className="mt-8 h-10" />
       </div>
 
       {/* Contact */}
