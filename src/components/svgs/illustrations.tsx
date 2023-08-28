@@ -134,8 +134,8 @@ export const Windows = ({ className }: { className?: string }) => {
         strokeWidth="1.5"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Barber
 export const Barber = ({ className }: { className?: string }) => {
@@ -169,8 +169,8 @@ export const Barber = ({ className }: { className?: string }) => {
         strokeWidth="1.5"
       />
     </svg>
-  );
-};
+  )
+}
 
 // Ounaturg
 export const Ounaturg = ({ className }: { className?: string }) => {
@@ -190,13 +190,61 @@ export const Ounaturg = ({ className }: { className?: string }) => {
         strokeWidth="2"
       />
     </svg>
-  );
-};
+  )
+}
+
+// Person
+export const Person = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      width="12"
+      height="25"
+      viewBox="0 0 12 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M0.714914 15.9573C0.334687 12.7887 2.80875 10 6.00004 10C9.19133 10 11.6654 12.7887 11.2852 15.9573L10.4114 23.2383C10.2908 24.2435 9.4381 25 8.42569 25H3.57439C2.56199 25 1.70926 24.2435 1.58864 23.2383L0.714914 15.9573Z"
+        fill="currentColor"
+      />
+      <path
+        d="M10 4C10 6.20914 8.20918 8 6.00004 8C3.7909 8 2.00004 6.20914 2.00004 4C2.00004 1.79086 3.7909 0 6.00004 0C8.20918 0 10 1.79086 10 4Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+// PersonAlt
+export const PersonAlt = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      width="16"
+      height="25"
+      viewBox="0 0 16 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M1.78682 14.9498C2.29591 12.0861 4.78562 10 7.69419 10H8.30604C11.2146 10 13.7043 12.0861 14.2134 14.9498L15.5823 22.6499C15.8002 23.8753 14.8578 25 13.6132 25H2.38703C1.1424 25 0.200052 23.8753 0.417904 22.6499L1.78682 14.9498Z"
+        fill="currentColor"
+      />
+      <path
+        d="M12.0001 4C12.0001 6.20914 10.2093 8 8.00011 8C5.79098 8 4.00011 6.20914 4.00011 4C4.00011 1.79086 5.79098 0 8.00011 0C10.2093 0 12.0001 1.79086 12.0001 4Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
 
 const Illustrations = {
   Windows,
   Barber,
   Ounaturg,
-};
+  Person,
+  PersonAlt,
+}
 
-export default Illustrations;
+export default Illustrations

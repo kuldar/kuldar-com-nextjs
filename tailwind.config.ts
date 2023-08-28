@@ -58,6 +58,7 @@ const config: Config = {
     },
     animation: {
       'spin-slow': 'spin 3s linear infinite',
+      'spin-slower': 'spin 10s linear infinite',
     },
   },
   plugins: [],
