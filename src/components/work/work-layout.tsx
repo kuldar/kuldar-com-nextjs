@@ -2,9 +2,9 @@ import Nav from '@/components/shared/nav'
 import Icons from '@/components/svgs/icons'
 import Footer from '@/components/shared/footer'
 import NewsletterForm from '@/components/articles/newsletter-form'
-// import RecentArticles from '@/components/articles/recent-articles'
 
 import { formatDate } from '@/utils/helpers'
+import Illustrations from '../svgs/illustrations'
 
 // Work layout
 export const WorkLayout = async ({ children, work }: any) => {
@@ -65,7 +65,11 @@ export const WorkLayout = async ({ children, work }: any) => {
                   {work.title}
                 </h1>
                 <div className="mt-4 text-lg text-gray-100">
-                  {formatDate(work.date)}
+                  {work.updatedAt ? (
+                    <span>Updated on {formatDate(work.createdAt)}</span>
+                  ) : (
+                    formatDate(work.createdAt)
+                  )}
                 </div>
               </div>
             </div>
@@ -85,10 +89,65 @@ export const WorkLayout = async ({ children, work }: any) => {
           {/* Narrow section */}
           <div className="col-span-12 flex flex-col-reverse border-x border-gray-500 lg:flex-col min-[1150px]:col-span-4">
             <div className="border-b-0 border-t border-gray-500 bg-center p-6 xs:p-8 min-[1150px]:border-b min-[1150px]:border-t-0 min-[1150px]:bg-dotted min-[1150px]:py-8">
-              <div>
-                <NewsletterForm />
-                {/* <RecentArticles /> */}
+              <div className="relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-gray-500 bg-gray-1000 p-6">
+                <Illustrations.Barber
+                  className="absolute text-gray-500/80"
+                  position="-top-12 -right-44"
+                />
+
+                <div className="relative">
+                  <div className="mb-1 text-sm font-bold uppercase tracking-wide text-gray-100">
+                    Client
+                  </div>
+                  <div className="text-lg font-bold leading-snug">
+                    {work.client.name}
+                  </div>
+                  <a
+                    href={work.client.website}
+                    target="_blank"
+                    className="text-gray-30 underline decoration-green-500 hover:text-white"
+                  >
+                    {work.client.website}
+                  </a>
+                </div>
+
+                <div className="relative">
+                  <div className="mb-1 text-sm font-bold uppercase tracking-wide text-gray-100">
+                    Year
+                  </div>
+                  <div className="text-gray-40">{work.year}</div>
+                </div>
+
+                <div className="relative">
+                  <div className="mb-1 text-sm font-bold uppercase tracking-wide text-gray-100">
+                    Built with
+                  </div>
+                  <div>
+                    {work.technologies.map((technology: any, i) => (
+                      <span className="text-gray-40" key={technology.name}>
+                        <a
+                          href={technology.link}
+                          className="text-gray-30 underline decoration-green-500 hover:text-white"
+                        >
+                          {technology.name}
+                        </a>
+                        {i == work.technologies.length - 1 ? '' : ', '}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="mb-1 text-sm font-bold uppercase tracking-wide text-gray-100">
+                    Overview
+                  </div>
+                  <div className="text-gray-40">{work.details}</div>
+                </div>
               </div>
+            </div>
+
+            <div className="p-6 xs:p-8 min-[1150px]:py-8">
+              <NewsletterForm />
             </div>
           </div>
         </div>

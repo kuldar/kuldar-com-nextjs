@@ -138,14 +138,20 @@ export const Windows = ({ className }: { className?: string }) => {
 }
 
 // Barber
-export const Barber = ({ className }: { className?: string }) => {
+export const Barber = ({
+  className,
+  position = '-bottom-2 -right-36',
+}: {
+  className?: string
+  position?: string
+}) => {
   return (
     <svg
       width="382"
       height="228"
       viewBox="0 0 382 228"
       fill="none"
-      className={`${className} -bottom-2 -right-36`}
+      className={`${className} ${position}`}
     >
       <path
         fillRule="evenodd"
