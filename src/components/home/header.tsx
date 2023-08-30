@@ -5,10 +5,16 @@ import { transitions, variants, animate } from '@/utils/animations'
 import Logo from '@/components/svgs/logo'
 import Icons from '@/components/svgs/icons'
 import { generateGreeting } from '@/utils/helpers'
-import Jams from '@/components/home/jams'
+// import Jams from '@/components/home/jams'
+import { Listening } from '@/components/home/listening'
+import { CurrentlyPlaying } from '@/utils/spotify'
 
 // Header component
-export default function Header() {
+export default function Header({
+  currentlyPlaying,
+}: {
+  currentlyPlaying: CurrentlyPlaying | false
+}) {
   return (
     <>
       {/* Top bar */}
@@ -52,7 +58,8 @@ export default function Header() {
           <div className="col-span-2 hidden border-r border-t border-gray-500 max-md:order-last lg:col-span-1 lg:block lg:border-t-0"></div>
 
           {/* Jams */}
-          <Jams />
+          {/* <Jams /> */}
+          <Listening currentlyPlaying={currentlyPlaying} />
         </div>
       </header>
     </>
