@@ -5,6 +5,9 @@ import createMDX from '@next/mdx'
 
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'mdx'],
+  experimental: {
+    serverActions: true,
+  },
 }
 
 const withMDX = createMDX({

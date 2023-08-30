@@ -1,17 +1,32 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { animate, transitions, variants, whileInView } from '@/utils/animations'
+
 // Section title
 export default function SectionTitle({
   title,
   icon: Icon,
+  isFadedIn = true,
 }: {
-  title: string;
-  icon: any;
+  title: string
+  icon: any
+  isFadedIn?: boolean
 }) {
+  const animation = isFadedIn !== undefined ? animate : whileInView
+
   return (
-    <div className="flex items-center space-x-3">
+    <motion.div
+      {...animation}
+      transition={transitions.default}
+      variants={variants.fadeInDown}
+      whileInView={isFadedIn ? 'show' : 'hidden'}
+      className="flex items-center space-x-3"
+    >
       <Icon className="h-4 text-white" />
       <div className="text-sm font-bold uppercase tracking-wide text-green-400">
         {title}
       </div>
-    </div>
-  );
+    </motion.div>
+  )
 }

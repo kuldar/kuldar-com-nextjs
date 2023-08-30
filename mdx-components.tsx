@@ -1,5 +1,8 @@
 import type { MDXComponents } from 'mdx/types'
 
+import { Video } from '@/components/shared/video'
+import { Image } from '@/components/shared/image'
+
 // Custom hook allowing to customize the built-in MDX components
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -59,6 +62,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </blockquote>
     ),
+    Video,
+    Image,
     ...components,
   }
 }

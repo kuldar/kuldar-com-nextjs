@@ -1,3 +1,7 @@
+'use client'
+import { motion } from 'framer-motion'
+
+import { animate, transitions, variants, whileInView } from '@/utils/animations'
 import CompanyLogos from '@/components/svgs/company-logos'
 
 // Projects
@@ -38,7 +42,13 @@ export const companies = [
 export default function Companies() {
   return (
     <div className="order-2 col-span-12 flex flex-col-reverse border-x border-gray-500 lg:order-1 lg:col-span-5 lg:flex-col xl:col-span-4">
-      <div className="flex h-64 flex-1 flex-col items-center justify-center border-t border-gray-500 px-8 py-8 text-center lg:border-t-0">
+      <motion.div
+        {...whileInView}
+        whileInView="show"
+        transition={transitions.default}
+        variants={variants.fadeInDown}
+        className="flex h-64 flex-1 flex-col items-center justify-center border-t border-gray-500 px-8 py-8 text-center lg:border-t-0"
+      >
         <div className="mb-4 text-lg font-bold leading-snug">
           Companies{' '}
           <span className="inline lg:block">I&#39;ve worked with</span>
@@ -56,7 +66,7 @@ export default function Companies() {
             </a>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

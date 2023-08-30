@@ -6,6 +6,7 @@ import Icons from '@/components/svgs/icons'
 import { getAllArticles } from '@/utils/fetch-articles'
 import { Article as ArticleType } from '@/utils/fetch-articles'
 import { formatDate } from '@/utils/helpers'
+import Link from 'next/link'
 
 // export const metadata = {
 //   title: 'Articles',
@@ -14,15 +15,15 @@ import { formatDate } from '@/utils/helpers'
 // Article
 function Article({ article }: { article: ArticleType }) {
   return (
-    <article>
-      <div>
-        <h2 className="text-2xl font-bold tracking-snug">
-          <a href={`/articles/${article.slug}`}>{article.title}</a>
-        </h2>
-        <div>{article.date}</div>
-        <div>{article.description}</div>
-      </div>
-    </article>
+    <Link
+      href={`/articles/${article.slug}`}
+      className="p-6 xs:p-10 min-[900px]:p-16"
+    >
+      <h1 className="mb-4 text-4xl font-bold leading-[110%] tracking-snug">
+        {article.title}
+      </h1>
+      <div className="text-lg text-gray-50">{article.description}</div>
+    </Link>
   )
 }
 
@@ -41,47 +42,10 @@ export default async function ArticlesIndex() {
             {/* Wide Header */}
             <div className="flex border-b border-gray-500">
               {/* Action Column */}
-              <div className="hidden w-24 flex-col items-center space-y-4 border-r border-gray-500 py-6 min-[900px]:flex">
-                <a
-                  href="#"
-                  className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 transition-colors hover:border-gray-200 active:top-[1px]"
-                >
-                  <Icons.Share className="w-5 flex-shrink-0 -translate-x-0.5 text-gray-50 transition-all group-hover:text-green-400" />
-                </a>
-
-                <a
-                  href="#"
-                  className="group relative flex w-12 flex-col items-center justify-center space-y-2 rounded-full border border-gray-500 py-3 transition-colors hover:border-gray-200 active:top-[1px]"
-                >
-                  <Icons.Heart className="w-5 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
-                  <div className="text-lg font-bold leading-none">
-                    {/* {article._count.likes} */}0
-                  </div>
-                </a>
-              </div>
+              <div className="hidden w-24 flex-col items-center space-y-4 border-r border-gray-500 py-6 min-[900px]:flex"></div>
 
               {/* Main */}
               <div className="flex-1 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-6 xs:p-10 min-[900px]:p-16">
-                {/* Action bar */}
-                <div className="mb-4 flex items-center space-x-4 min-[900px]:hidden">
-                  <a
-                    href="#"
-                    className="group relative flex h-10 items-center justify-center space-x-2 rounded-full border border-gray-500 p-3 transition-colors hover:border-gray-200 active:top-[1px]"
-                  >
-                    <Icons.Heart className="w-4 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
-                    <div className="text-lg font-bold leading-none">
-                      {/* {article._count.likes} */}0
-                    </div>
-                  </a>
-
-                  <a
-                    href="#"
-                    className="group relative flex h-10 w-10 items-center justify-center rounded-full border border-gray-500 transition-colors hover:border-gray-200 active:top-[1px]"
-                  >
-                    <Icons.Share className="w-4 flex-shrink-0 -translate-x-0.5 text-gray-50 transition-all group-hover:text-green-400" />
-                  </a>
-                </div>
-
                 <h1 className="text-4xl font-bold leading-[110%] tracking-snug xs:text-5xl">
                   Bla Bla
                 </h1>
@@ -95,7 +59,7 @@ export default async function ArticlesIndex() {
               <div className="relative hidden w-24 border-r border-gray-500 bg-dotted bg-center before:absolute before:-top-[1px] before:right-0 before:-z-10 before:h-[1px] before:w-[100vw] before:bg-gray-500 before:content-[''] min-[900px]:block"></div>
 
               {/* Main content */}
-              <div className="flex-1 overflow-auto p-6 xs:p-10 min-[900px]:p-16">
+              <div className="flex flex-1 flex-col divide-y divide-gray-500 overflow-auto">
                 {articles.map((article) => (
                   <Article key={article.slug} article={article} />
                 ))}

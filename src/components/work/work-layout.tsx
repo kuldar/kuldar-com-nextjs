@@ -123,7 +123,7 @@ export const WorkLayout = async ({ children, work }: any) => {
                     Built with
                   </div>
                   <div>
-                    {work.technologies.map((technology: any, i) => (
+                    {work.technologies.map((technology: any, i: number) => (
                       <span className="text-gray-40" key={technology.name}>
                         <a
                           href={technology.link}

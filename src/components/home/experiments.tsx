@@ -1,3 +1,8 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
+import { animate, transitions, variants, whileInView } from '@/utils/animations'
 import Icons from '@/components/svgs/icons'
 import SectionTitle from '@/components/shared/section-title'
 import { Person, PersonAlt } from '@/components/svgs/illustrations'
@@ -155,10 +160,17 @@ export default function Experiments() {
       <SectionTitle title="Experiments" icon={Icons.Labs} />
 
       {/* List of experiments */}
-      <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
+      <motion.div
+        {...animate}
+        transition={{ ...transitions.default, delay: 0.75 }}
+        variants={variants.staggerChildren}
+        className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5"
+      >
         {experiments.map((experiment) => {
           return (
-            <a
+            <motion.a
+              transition={transitions.default}
+              variants={variants.fadeInDown}
               target="_blank"
               href={experiment.link}
               key={experiment.name}
@@ -176,19 +188,11 @@ export default function Experiments() {
                 </div>
 
                 {experiment.illustration}
-                {/* <span className="inline-flex items-center space-x-2 rounded-lg border border-gray-500 py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-200">
-                  <div className="text-sm font-bold leading-none text-white">
-                    View
-                  </div>
-                  <div className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/card:border-green-400 group-hover/card:bg-green-400">
-                    <Icons.Arrow className="h-2 w-2 text-white transition-colors group-hover/card:text-gray-1000" />
-                  </div>
-                </span> */}
               </div>
-            </a>
+            </motion.a>
           )
         })}
-      </div>
+      </motion.div>
     </div>
   )
 }

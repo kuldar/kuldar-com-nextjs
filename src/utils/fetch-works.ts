@@ -3,10 +3,18 @@ import glob from 'fast-glob'
 import { MDXModule } from 'mdx/types'
 
 type WorkMeta = {
-  slug: string
-  date: string
   title: string
+  slug: string
   description: string
+  createdAt: string
+  updatedAt: string
+  year: number
+  technologies: { name: string; link: string }[]
+  details: string
+  client: {
+    name: string
+    website: string
+  }
 }
 
 export type Work = MDXModule & WorkMeta

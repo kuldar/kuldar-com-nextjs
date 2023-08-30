@@ -38,25 +38,25 @@ export default function Nav() {
           <div className="flex flex-1 items-center justify-end border-r border-gray-500 pr-6">
             <nav className="flex items-center gap-4">
               <Link
-                href="/articles"
-                className="group relative flex items-center rounded-full border border-gray-500 px-4 py-2 transition-colors hover:border-gray-200 active:top-[1px]"
-              >
-                <>
-                  <Icons.ArrowLeft className="h-4 text-gray-200 transition-all group-hover:mr-4 group-hover:text-green-400 xs:mr-3" />
-                  <div className="hidden text-sm font-bold uppercase tracking-wide text-white xs:block">
-                    Articles
-                  </div>
-                </>
-              </Link>
-
-              <Link
                 href="/work"
-                className="group relative flex items-center rounded-full border border-gray-500 py-2 pl-3 pr-4 transition-colors hover:border-gray-200 active:top-[1px]"
+                className="group relative flex items-center rounded-full border border-gray-500 px-4 py-2 transition-colors hover:border-gray-200 active:top-[1px]"
               >
                 <>
                   <Icons.Suitcase className="h-4 text-gray-200 transition-all group-hover:mr-4 group-hover:text-green-400 xs:mr-3" />
                   <div className="hidden text-sm font-bold uppercase tracking-wide text-white xs:block">
                     Work
+                  </div>
+                </>
+              </Link>
+
+              <Link
+                href="/articles"
+                className="group relative flex items-center rounded-full border border-gray-500 px-4 py-2 transition-colors hover:border-gray-200 active:top-[1px]"
+              >
+                <>
+                  <Icons.Bookmark className="h-4 text-gray-200 transition-all group-hover:mr-4 group-hover:text-green-400 xs:mr-3" />
+                  <div className="hidden text-sm font-bold uppercase tracking-wide text-white xs:block">
+                    Articles
                   </div>
                 </>
               </Link>

@@ -1,3 +1,8 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { animate, transitions, variants, whileInView } from '@/utils/animations'
+
 import SectionTitle from '@/components/shared/section-title'
 import Illustrations from '@/components/svgs/illustrations'
 import Icons from '@/components/svgs/icons'
@@ -14,7 +19,7 @@ export const works = [
     name: 'A-Barber',
     description:
       'Some branding, marketing design and web development for my dear sister-in-law.',
-    link: 'https://a-barber.ee/',
+    link: '/work/a-barber',
     illustration: Illustrations.Barber,
   },
   {
@@ -36,10 +41,13 @@ export default function Works() {
       {/* List of work */}
       <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-8">
         {works.map((work) => (
-          <a
+          <motion.a
+            {...whileInView}
+            whileInView="show"
+            transition={transitions.default}
+            variants={variants.fadeInDown}
             key={work.name}
             href={work.link}
-            target="_blank"
             className="group/card relative col-span-6 overflow-hidden rounded-2xl border-t border-gray-50/20 bg-gradient-to-br from-gray-1000 via-gray-800 to-gray-950 active:top-[1px] md:col-span-3 last:md:col-span-6 lg:col-span-2 last:lg:col-span-2"
           >
             <work.illustration className="absolute text-gray-500/80" />
@@ -61,7 +69,7 @@ export default function Works() {
                 </div>
               </span>
             </div>
-          </a>
+          </motion.a>
         ))}
       </div>
     </div>
