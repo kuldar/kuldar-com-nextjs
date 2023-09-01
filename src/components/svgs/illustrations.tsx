@@ -137,6 +137,67 @@ export const Windows = ({ className }: { className?: string }) => {
   )
 }
 
+// Align
+export const Align = ({
+  className,
+  position = 'bottom-6 -right-2',
+}: {
+  className?: string
+  position?: string
+}) => {
+  return (
+    <svg
+      width="205"
+      height="169"
+      viewBox="0 0 205 169"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`${className} ${position}`}
+    >
+      <path
+        d="M173.716 168V137.957H204V168H173.716Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2 168H38.979L66.3881 128.918L118.236 168H149.403V1H119.12L2 168ZM118.436 130.078L83.7915 104.104L118.838 54.1318L118.436 130.078Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+    </svg>
+  )
+}
+
+// Prisma
+export const Prisma = ({
+  className,
+  position = '-bottom-2 -right-4',
+}: {
+  className?: string
+  position?: string
+}) => {
+  return (
+    <svg
+      width="172"
+      height="211"
+      viewBox="0 0 172 211"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`${className} ${position}`}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.61396 144.456C0.492206 141.103 0.460152 136.831 2.53132 133.445L80.5144 5.9684C84.8525 -1.12178 95.3261 -0.501829 98.8003 7.05068L170.042 161.918C172.685 167.664 169.642 174.425 163.594 176.243L52.7724 209.56C48.3136 210.9 43.5093 209.104 41.0169 205.164L2.61396 144.456ZM89.5121 43.2414C90.2639 39.4913 95.391 38.9505 96.9055 42.4617L146.047 156.413C146.971 158.559 145.821 161.033 143.586 161.701L67.0166 184.607C64.2022 185.448 61.5061 182.984 62.0844 180.098L89.5121 43.2414Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
+    </svg>
+  )
+}
+
 // Barber
 export const Barber = ({
   className,
@@ -251,6 +312,8 @@ const Illustrations = {
   Ounaturg,
   Person,
   PersonAlt,
+  Align,
+  Prisma,
 }
 
 export default Illustrations

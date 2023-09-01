@@ -10,25 +10,25 @@ import Icons from '@/components/svgs/icons'
 
 export const works = [
   {
-    name: 'Awesome AI',
+    name: 'Align',
+    description:
+      'Designed, co-built and sold a marketplace for selling second-hand Apple products.',
+    link: '/work/align',
+    illustration: Illustrations.Align,
+  },
+  {
+    name: 'Prisma',
     description:
       'Had a stupid itch to build a Hacker News for AI in the style of Windows 95. So I did.',
-    link: 'https://awesomeai.xyz/',
-    illustration: Illustrations.Windows,
+    link: '/work/prisma',
+    illustration: Illustrations.Prisma,
   },
   {
     name: 'A-Barber',
     description:
       'Some branding, marketing design and web development for my dear sister-in-law.',
-    link: 'https://a-barber.ee/',
+    link: '/work/a-barber',
     illustration: Illustrations.Barber,
-  },
-  {
-    name: 'Õunaturg',
-    description:
-      'Designed, co-built and sold a marketplace for selling second-hand Apple products.',
-    link: 'https://ounaturg.ee/',
-    illustration: Illustrations.Ounaturg,
   },
 ]
 

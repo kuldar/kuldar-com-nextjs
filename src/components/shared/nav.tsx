@@ -43,14 +43,14 @@ export default function Nav() {
                 className="group relative flex items-center rounded-full border border-gray-500 px-4 py-2 transition-colors hover:border-gray-200 active:top-[1px]"
               >
                 <>
-                  <Icons.Suitcase className="h-4 text-gray-200 transition-all group-hover:mr-4 group-hover:text-green-400 xs:mr-3" />
+                  <Icons.Suitcase className="h-4 text-gray-200 transition-all group-hover:text-green-400 xs:mr-3" />
                   <div className="hidden text-sm font-bold uppercase tracking-wide text-white xs:block">
-                    Work
+                    All work
                   </div>
                 </>
               </Link>
 
-              <Link
+              {/* <Link
                 href="/articles"
                 className="group relative flex items-center rounded-full border border-gray-500 px-4 py-2 transition-colors hover:border-gray-200 active:top-[1px]"
               >
@@ -60,7 +60,7 @@ export default function Nav() {
                     Articles
                   </div>
                 </>
-              </Link>
+              </Link> */}
             </nav>
 
             {/* Divider */}

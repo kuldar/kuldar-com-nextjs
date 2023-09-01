@@ -2,7 +2,7 @@ import Nav from '@/components/shared/nav'
 import Icons from '@/components/svgs/icons'
 import Footer from '@/components/shared/footer'
 import NewsletterForm from '@/components/articles/newsletter-form'
-import Illustrations from '@/components/svgs/illustrations'
+import { LikeButton } from '@/components/shared/like-button'
 import { formatDate } from '@/utils/helpers'
 
 // Work layout
@@ -27,15 +27,7 @@ export const WorkLayout = async ({ children, work }: any) => {
                   <Icons.Share className="w-5 flex-shrink-0 -translate-x-0.5 text-gray-50 transition-all group-hover:text-green-400" />
                 </a>
 
-                <a
-                  href="#"
-                  className="group relative flex w-12 flex-col items-center justify-center space-y-2 rounded-full border border-gray-500 py-3 transition-colors hover:border-gray-200 active:top-[1px]"
-                >
-                  <Icons.Heart className="w-5 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
-                  <div className="text-lg font-bold leading-none">
-                    {/* {work._count.likes} */}0
-                  </div>
-                </a>
+                <LikeButton slug={work.slug} />
               </div>
 
               {/* Main */}
@@ -89,9 +81,9 @@ export const WorkLayout = async ({ children, work }: any) => {
           <div className="col-span-12 flex flex-col-reverse border-x border-gray-500 lg:flex-col min-[1150px]:col-span-4">
             <div className="border-b-0 border-t border-gray-500 bg-center p-6 xs:p-8 min-[1150px]:border-b min-[1150px]:border-t-0 min-[1150px]:bg-dotted min-[1150px]:py-8">
               <div className="relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-gray-500 bg-gray-1000 p-6">
-                <Illustrations.Barber
+                <work.client.illustration
                   className="absolute text-gray-500/80"
-                  position="-top-12 -right-44"
+                  position={work.client.illustrationPosition}
                 />
 
                 <div className="relative">
