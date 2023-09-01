@@ -7,7 +7,7 @@ import Logo from '@/components/svgs/logo'
 import Icons from '@/components/svgs/icons'
 import Jams from '@/components/home/jams'
 import { generateGreeting } from '@/utils/helpers'
-// import { Listening } from '@/components/home/listening'
+import { Listening } from '@/components/home/listening'
 
 // Header component
 export default function Header() {
@@ -55,7 +55,7 @@ export default function Header() {
 
           {/* Jams */}
           {/* <Jams /> */}
-          {/* <Listening /> */}
+          <Listening />
         </div>
       </header>
     </>
