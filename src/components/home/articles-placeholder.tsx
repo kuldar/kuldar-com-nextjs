@@ -1,8 +1,9 @@
 'use client'
+
 import { motion } from 'framer-motion'
 
-import { animate, transitions, variants, whileInView } from '@/utils/animations'
 import { ArticlesPlaceholderNewsletterForm } from '@/components/home/articles-placeholder-newsletter-form'
+import { transitions, variants, whileInView } from '@/utils/animations'
 
 // Articles placeholder
 export async function ArticlesPlaceholder() {
@@ -11,7 +12,6 @@ export async function ArticlesPlaceholder() {
       <div className="h-full border-l border-gray-500 bg-gray-1000/20 p-6 pr-0 transition-colors hover:bg-transparent xs:p-10 lg:border-l-0">
         <motion.div
           {...whileInView}
-          whileInView="show"
           transition={transitions.default}
           variants={variants.fadeInDown}
           className="mx-auto flex h-full max-w-md flex-1 flex-col items-center justify-center gap-y-4"

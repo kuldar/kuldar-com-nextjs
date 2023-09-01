@@ -1,5 +1,6 @@
-import { Work as WorkType } from '@/utils/fetch-works'
 import Link from 'next/link'
+
+import { Work as WorkType } from '@/utils/fetch-works'
 
 // Work grid item
 export function WorkGridItem({
@@ -9,14 +10,6 @@ export function WorkGridItem({
   work: WorkType
   index: number
 }) {
-  // const gridPlacement = [
-  //   'row-start-1 col-start-1 row-end-2 col-end-4 lg:col-end-5',
-  //   'row-start-1 col-start-5 row-end-3 col-end-7',
-  //   'row-start-2 col-start-1 row-end-3 col-end-5',
-  //   'row-start-3 col-start-3 row-end-4 col-end-7',
-  //   'row-start-3 col-start-1 row-end-5 col-end-3',
-  //   'row-start-4 col-start-3 row-end-5 col-end-7',
-  // ]
   const gridPlacement = [
     'col-span-6 md:col-span-3 lg:col-span-4',
     'col-span-6 md:col-span-3 lg:col-span-2 row-span-1 lg:row-span-2',

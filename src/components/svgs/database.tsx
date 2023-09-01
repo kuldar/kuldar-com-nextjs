@@ -1,5 +1,6 @@
-"use client";
-import { motion } from "framer-motion";
+'use client'
+
+import { motion } from 'framer-motion'
 
 // Database
 export default function Database({ className }: { className?: string }) {
@@ -22,7 +23,7 @@ export default function Database({ className }: { className?: string }) {
         animate={{ opacity: 0.6 }}
         transition={{
           opacity: {
-            ease: "easeInOut",
+            ease: 'easeInOut',
             duration: 2,
           },
         }}
@@ -38,7 +39,7 @@ export default function Database({ className }: { className?: string }) {
           pathLength: {
             delay: 3,
             duration: 2,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           },
           opacity: {
             duration: 0.5,
@@ -56,7 +57,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 4,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Green circle 1b */}
@@ -71,7 +72,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 4,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Blue line */}
@@ -85,7 +86,7 @@ export default function Database({ className }: { className?: string }) {
           pathLength: {
             delay: 1,
             duration: 3,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           },
           opacity: {
             duration: 0.5,
@@ -103,7 +104,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 2.5,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Blue circle 1b */}
@@ -118,7 +119,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 2.5,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Blue circle 2a */}
@@ -132,7 +133,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 2,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Blue circle 2b */}
@@ -147,7 +148,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 2,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Gradient line */}
@@ -161,7 +162,7 @@ export default function Database({ className }: { className?: string }) {
           pathLength: {
             delay: 2.75,
             duration: 1.5,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           },
           opacity: {
             duration: 0.5,
@@ -179,7 +180,7 @@ export default function Database({ className }: { className?: string }) {
           pathLength: {
             delay: 1,
             duration: 2,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           },
           opacity: {
             delay: 1,
@@ -198,7 +199,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 3,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Blue circle 3b */}
@@ -212,7 +213,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 3,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
         transform="scale(-1.22477 .70706) rotate(-45 240.485 395.867)"
       ></motion.circle>
@@ -227,7 +228,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 4,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Green circle 2b */}
@@ -241,7 +242,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 4,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
         transform="scale(-1.22477 .70706) rotate(-45 293.632 526.07)"
       ></motion.circle>
@@ -256,7 +257,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 3,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.circle>
       {/* Green circle 3b */}
@@ -270,7 +271,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 3,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
         transform="scale(-1.22477 .70706) rotate(-45 474.078 523.762)"
       ></motion.circle>
@@ -284,7 +285,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 0.5,
           duration: 1,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       ></motion.path>
       {/* Layer 1 */}
@@ -294,7 +295,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 0.6,
           duration: 0.75,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         <path
@@ -331,7 +332,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 0.4,
           duration: 0.75,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         <path
@@ -372,7 +373,7 @@ export default function Database({ className }: { className?: string }) {
         transition={{
           delay: 0.2,
           duration: 0.75,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         <path
@@ -594,5 +595,5 @@ export default function Database({ className }: { className?: string }) {
         </linearGradient>
       </defs>
     </motion.svg>
-  );
+  )
 }

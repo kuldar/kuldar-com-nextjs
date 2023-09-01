@@ -1,9 +1,10 @@
 'use client'
+
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import Signature from '@/components/svgs/signature'
 import Social from '@/components/shared/social'
-// import Icons from '@/components/svgs/icons'
 import { animate, transitions, variants, whileInView } from '@/utils/animations'
 
 // About component
@@ -38,21 +39,21 @@ export default function AboutMe() {
             transition={transitions.default}
           >
             I like to{' '}
-            <a
+            <Link
               target="_blank"
               href="https://www.instagram.com/kkkuldar/"
               className="text-white underline decoration-green-400"
             >
               play with cameras
-            </a>
+            </Link>
             , nerd over cool{' '}
-            <a
+            <Link
               target="_blank"
               href="https://www.youtube.com/watch?v=TeVbYCIFVa8"
               className="text-white underline decoration-green-400"
             >
               space rockets
-            </a>{' '}
+            </Link>{' '}
             and learn more about math and artificial intelligence.
           </motion.p>
         </motion.div>

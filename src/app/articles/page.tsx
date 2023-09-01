@@ -1,16 +1,11 @@
+import Link from 'next/link'
+
 import NewsletterForm from '@/components/articles/newsletter-form'
 import RecentArticles from '@/components/articles/recent-articles'
 import Footer from '@/components/shared/footer'
 import Nav from '@/components/shared/nav'
-import Icons from '@/components/svgs/icons'
 import { getAllArticles } from '@/utils/fetch-articles'
 import { Article as ArticleType } from '@/utils/fetch-articles'
-import { formatDate } from '@/utils/helpers'
-import Link from 'next/link'
-
-// export const metadata = {
-//   title: 'Articles',
-// }
 
 // Article
 function Article({ article }: { article: ArticleType }) {
@@ -27,6 +22,7 @@ function Article({ article }: { article: ArticleType }) {
   )
 }
 
+// Articles index
 export default async function ArticlesIndex() {
   let articles = await getAllArticles()
 

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import Footer from '@/components/shared/footer'
 import Nav from '@/components/shared/nav'
 import { getAllWorks } from '@/utils/fetch-works'

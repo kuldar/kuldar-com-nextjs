@@ -1,8 +1,9 @@
+import Link from 'next/link'
+
 import Logo from '@/components/svgs/logo'
 import Icons from '@/components/svgs/icons'
-import { generateGreeting } from '@/utils/helpers'
 import Social from '@/components/shared/social'
-import Link from 'next/link'
+import { generateGreeting } from '@/utils/helpers'
 
 // Nav component
 export default function Nav() {

@@ -1,4 +1,5 @@
 'use client'
+
 import { Plane } from '@/components/svgs/icons'
 
 // Newsletter form

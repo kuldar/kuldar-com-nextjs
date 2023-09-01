@@ -1,11 +1,11 @@
-import Icons from "@/components/svgs/icons";
+import Icons from '@/components/svgs/icons'
 
 // Small button component
 export function ButtonSmall({ label, link }: { label: string; link: string }) {
   return (
     <a
-      target={link.startsWith("https") ? "_blank" : "_self"}
-      rel={link.startsWith("https") ? "noreferrer" : undefined}
+      target={link.startsWith('https') ? '_blank' : '_self'}
+      rel={link.startsWith('https') ? 'noreferrer' : undefined}
       href={link}
       className="group/button inline-flex items-center space-x-2 rounded-lg border border-gray-500 py-2 pl-2.5 pr-2 transition-colors hover:border-gray-200 active:translate-y-[1px]"
     >
@@ -14,5 +14,5 @@ export function ButtonSmall({ label, link }: { label: string; link: string }) {
         <Icons.Arrow className="h-2 w-2 text-white transition-colors group-hover/button:text-gray-1000" />
       </div>
     </a>
-  );
+  )
 }

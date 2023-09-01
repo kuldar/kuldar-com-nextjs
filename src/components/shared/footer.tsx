@@ -1,4 +1,5 @@
 'use client'
+
 import { motion } from 'framer-motion'
 
 import { transitions, variants, whileInView } from '@/utils/animations'
@@ -12,7 +13,6 @@ export default function Footer() {
           <div className="border-x border-gray-500 p-8 xs:p-20">
             <motion.div
               {...whileInView}
-              whileInView="show"
               transition={transitions.default}
               variants={variants.fadeInDown}
               className="text-center"

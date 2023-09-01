@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+
 import { animate, transitions, variants, whileInView } from '@/utils/animations'
 
 // Section title

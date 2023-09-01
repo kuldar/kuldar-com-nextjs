@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-import { animate, transitions, variants, whileInView } from '@/utils/animations'
+import { animate, transitions, variants } from '@/utils/animations'
 import Drawing from '@/components/home/drawing'
 import Icons from '@/components/svgs/icons'
 import portrait from '@/components/home/portrait.jpg'

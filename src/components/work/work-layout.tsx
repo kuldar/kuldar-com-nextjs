@@ -2,9 +2,8 @@ import Nav from '@/components/shared/nav'
 import Icons from '@/components/svgs/icons'
 import Footer from '@/components/shared/footer'
 import NewsletterForm from '@/components/articles/newsletter-form'
-
+import Illustrations from '@/components/svgs/illustrations'
 import { formatDate } from '@/utils/helpers'
-import Illustrations from '../svgs/illustrations'
 
 // Work layout
 export const WorkLayout = async ({ children, work }: any) => {

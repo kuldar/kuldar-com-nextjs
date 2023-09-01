@@ -1,12 +1,12 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { animate, transitions, variants, whileInView } from '@/utils/animations'
 
+import { transitions, variants, whileInView } from '@/utils/animations'
 import SectionTitle from '@/components/shared/section-title'
 import Illustrations from '@/components/svgs/illustrations'
 import Icons from '@/components/svgs/icons'
-import Link from 'next/link'
 
 export const works = [
   {

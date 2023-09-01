@@ -1,7 +1,8 @@
 'use client'
 
-import Icons from '@/components/svgs/icons'
 import { motion } from 'framer-motion'
+
+import Icons from '@/components/svgs/icons'
 import { animate, transitions, variants, whileInView } from '@/utils/animations'
 
 export const links = [
