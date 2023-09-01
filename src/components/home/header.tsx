@@ -5,9 +5,8 @@ import { transitions, variants, animate } from '@/utils/animations'
 
 import Logo from '@/components/svgs/logo'
 import Icons from '@/components/svgs/icons'
-import Jams from '@/components/home/jams'
 import { generateGreeting } from '@/utils/helpers'
-import { Listening } from '@/components/home/listening'
+import { ListeningWrapper } from '@/components/home/listening-wrapper'
 
 // Header component
 export default function Header() {
@@ -54,8 +53,7 @@ export default function Header() {
           <div className="col-span-2 hidden border-r border-t border-gray-500 max-md:order-last lg:col-span-1 lg:block lg:border-t-0"></div>
 
           {/* Jams */}
-          {/* <Jams /> */}
-          <Listening />
+          <ListeningWrapper />
         </div>
       </header>
     </>
