@@ -6,3 +6,5 @@ export async function GET() {
   const currentlyPlaying = await getCurrentlyPlaying()
   return NextResponse.json({ data: currentlyPlaying })
 }
+
+export const dynamic = 'force-dynamic'

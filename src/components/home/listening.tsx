@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import useSWR from 'swr'
 
 import { animate, transitions, variants } from '@/utils/animations'
 import { type CurrentlyPlaying } from '@/utils/spotify'
@@ -15,17 +16,16 @@ const favorite: CurrentlyPlaying = {
   isPlaying: false,
 }
 
-export function Listening() {
-  const [playing, setPlaying] = useState<CurrentlyPlaying | false>(false)
+// @ts-ignore
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-  useEffect(() => {
-    fetch('/api/listening')
-      .then((res) => res.json())
-      .then(({ data }) => {
-        console.log({ data })
-        setPlaying(data)
-      })
-  }, [])
+export function Listening() {
+  // const [playing, setPlaying] = useState<CurrentlyPlaying | false>(false)
+  const { data, error } = useSWR('/api/listening', fetcher)
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
+
+  const { playing } = data
 
   return (
     <motion.div
