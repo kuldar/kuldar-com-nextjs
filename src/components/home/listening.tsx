@@ -1,6 +1,5 @@
 'use client'
 
-// import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import useSWR from 'swr'
 
@@ -20,8 +19,7 @@ const favorite: CurrentlyPlaying = {
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export function Listening() {
-  // const [playing, setPlaying] = useState<CurrentlyPlaying | false>(false)
-  const { data, error } = useSWR('/api/listening', fetcher)
+  const { data: playing, error, isLoading } = useSWR('/api/listening', fetcher)
 
   return (
     <motion.div
@@ -30,9 +28,11 @@ export function Listening() {
       variants={variants.staggerChildrenQuick}
       className="col-span-10 hidden flex-col items-end justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 text-right md:col-span-6 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4"
     >
-      {error ? (
+      {isLoading ? (
+        <div></div>
+      ) : error ? (
         <div>There was a problem</div>
-      ) : !data ? (
+      ) : !playing ? (
         <div></div>
       ) : (
         <>
@@ -41,23 +41,23 @@ export function Listening() {
             variants={variants.fadeInDown}
             className="mb-4 w-full border-b border-gray-500 pb-4 text-sm font-bold uppercase text-gray-200"
           >
-            {data.playing ? 'Currently playing' : 'Recent favorite'}
+            {playing ? 'Currently playing' : 'Recent favorite'}
           </motion.div>
 
-          {data.playing ? (
+          {playing ? (
             <motion.a
               transition={transitions.default}
               variants={variants.fadeInDown}
               target="_blank"
-              href={data.playing.songUrl}
+              href={playing.songUrl}
               className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
             >
               <div>
                 <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
-                  {data.playing.artist}
+                  {playing.artist}
                 </div>
 
-                <div className="text-gray-50">{data.playing.title}</div>
+                <div className="text-gray-50">{playing.title}</div>
               </div>
 
               <div className="relative">
@@ -66,12 +66,10 @@ export function Listening() {
                 <div className="absolute inset-4 z-10 rounded-full bg-black/30 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.3),inset_0_1px_1px_0px_rgba(0,0,0,0.4)]"></div>
                 <div
                   className={`flex h-12 w-12 items-center justify-center rounded-full bg-cover active:top-[1px] ${
-                    data.playing &&
-                    data.playing.isPlaying &&
-                    'animate-spin-slower'
+                    playing && playing.isPlaying && 'animate-spin-slower'
                   }`}
                   style={{
-                    backgroundImage: `url("${data.playing.albumImageUrl}")`,
+                    backgroundImage: `url("${playing.albumImageUrl}")`,
                   }}
                 ></div>
               </div>

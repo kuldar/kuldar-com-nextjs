@@ -1,13 +1,4 @@
-// import { cache } from 'react'
 import 'server-only'
-
-// export const preloadCurrentlyPlaying = () => {
-//   void getCachedCurrentlyPlaying()
-// }
-
-// export const getCachedCurrentlyPlaying = cache(async () => {
-//   return await getCurrentlyPlaying()
-// })
 
 export type CurrentlyPlaying = {
   albumImageUrl: string
