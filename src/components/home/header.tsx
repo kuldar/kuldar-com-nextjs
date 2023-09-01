@@ -5,8 +5,8 @@ import { transitions, variants, animate } from '@/utils/animations'
 
 import Logo from '@/components/svgs/logo'
 import Icons from '@/components/svgs/icons'
-import { generateGreeting } from '@/utils/helpers'
 import Jams from '@/components/home/jams'
+import { generateGreeting } from '@/utils/helpers'
 // import { Listening } from '@/components/home/listening'
 
 // Header component

@@ -44,7 +44,6 @@ export default function Works() {
         {works.map((work) => (
           <motion.div
             {...whileInView}
-            whileInView="show"
             transition={transitions.default}
             variants={variants.fadeInDown}
             key={work.name}
