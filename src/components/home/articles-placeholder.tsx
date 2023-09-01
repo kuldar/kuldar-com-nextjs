@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-import { ArticlesPlaceholderNewsletterForm } from '@/components/home/articles-placeholder-newsletter-form'
+// import { ArticlesPlaceholderNewsletterForm } from '@/components/home/articles-placeholder-newsletter-form'
 import { transitions, variants, whileInView } from '@/utils/animations'
 
 // Articles placeholder
@@ -19,7 +19,7 @@ export async function ArticlesPlaceholder() {
           <div className="inline-block text-center text-3xl font-bold leading-tight">
             Articles coming soon.
           </div>
-          <ArticlesPlaceholderNewsletterForm />
+          {/* <ArticlesPlaceholderNewsletterForm /> */}
         </motion.div>
       </div>
     </div>
