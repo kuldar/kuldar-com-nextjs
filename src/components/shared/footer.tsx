@@ -24,7 +24,7 @@ export default function Footer() {
                   href="mailto:email@kuldar.com"
                   className="inline-block text-white underline decoration-green-400"
                 >
-                  Let&#39;s talk shop.
+                  Let&#39;s talk.
                 </a>
               </div>
               <div className="mx-auto max-w-2xl text-gray-300">

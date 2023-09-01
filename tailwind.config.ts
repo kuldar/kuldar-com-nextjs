@@ -61,7 +61,7 @@ const config: Config = {
       'spin-slower': 'spin 10s linear infinite',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/container-queries')],
 }
 
 export default config
