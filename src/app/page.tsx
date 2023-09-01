@@ -26,7 +26,7 @@ export default async function Home() {
       </div>
 
       {/* Second section */}
-      <div className="border-b border-gray-500">
+      {/* <div className="border-b border-gray-500">
         <div className="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
           <Companies />
           <ArticlesPlaceholder />
@@ -35,7 +35,7 @@ export default async function Home() {
         <div className="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10">
           <Works />
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

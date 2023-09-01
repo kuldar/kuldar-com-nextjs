@@ -18,6 +18,7 @@ export const ArticlesPlaceholderNewsletterForm = () => {
           name="email"
           id="bd-email"
           placeholder="your@email.com"
+          autoComplete="email"
           className="h-16 w-full flex-1 bg-transparent pl-6 text-lg outline-none placeholder:text-gray-200"
         />
         <button
