@@ -54,7 +54,7 @@ export default function Header() {
           <div className="col-span-2 hidden border-r border-t border-gray-500 max-md:order-last lg:col-span-1 lg:block lg:border-t-0"></div>
 
           {/* Jams */}
-          <Jams />
+          {/* <Jams /> */}
           {/* <Listening /> */}
         </div>
       </header>

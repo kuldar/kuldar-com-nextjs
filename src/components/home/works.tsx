@@ -62,14 +62,14 @@ export default function Works() {
                   {work.description}
                 </div>
 
-                <span className="inline-flex items-center space-x-2 rounded-lg border border-gray-500 bg-gray-900 py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-200">
+                <div className="inline-flex items-center space-x-2 rounded-lg border border-gray-500 bg-gray-900 py-2 pl-2.5 pr-2 transition-colors group-hover/card:border-gray-200">
                   <div className="text-sm font-bold leading-none text-white">
                     View more
                   </div>
                   <div className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-gray-200 transition-colors group-hover/card:border-green-400 group-hover/card:bg-green-400">
                     <Icons.Arrow className="h-2 w-2 text-white transition-colors group-hover/card:text-gray-1000" />
                   </div>
-                </span>
+                </div>
               </div>
             </Link>
           </motion.div>
