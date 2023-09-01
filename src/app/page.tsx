@@ -4,14 +4,11 @@ import Experiments from '@/components/home/experiments'
 import Portrait from '@/components/home/portrait'
 import Companies from '@/components/home/companies'
 import { ArticlesPlaceholder } from '@/components/home/articles-placeholder'
-import Works from '@/components/home/works'
+// import Works from '@/components/home/works'
 import Footer from '@/components/shared/footer'
-// import { getCurrentlyPlaying } from '@/utils/spotify'
 
 // Home page
 export default async function Home() {
-  // const currentlyPlaying = await getCurrentlyPlaying()
-
   return (
     <div>
       <Header />

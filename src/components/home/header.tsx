@@ -1,4 +1,5 @@
 'use client'
+
 import { motion } from 'framer-motion'
 import { transitions, variants, animate } from '@/utils/animations'
 
@@ -7,7 +8,6 @@ import Icons from '@/components/svgs/icons'
 import { generateGreeting } from '@/utils/helpers'
 import Jams from '@/components/home/jams'
 // import { Listening } from '@/components/home/listening'
-// import { CurrentlyPlaying } from '@/utils/spotify'
 
 // Header component
 export default function Header() {
@@ -55,7 +55,7 @@ export default function Header() {
 
           {/* Jams */}
           <Jams />
-          {/* <Listening currentlyPlaying={currentlyPlaying} /> */}
+          {/* <Listening /> */}
         </div>
       </header>
     </>
