@@ -7,14 +7,10 @@ import Icons from '@/components/svgs/icons'
 import { generateGreeting } from '@/utils/helpers'
 import Jams from '@/components/home/jams'
 // import { Listening } from '@/components/home/listening'
-import { CurrentlyPlaying } from '@/utils/spotify'
+// import { CurrentlyPlaying } from '@/utils/spotify'
 
 // Header component
-export default function Header({
-  currentlyPlaying,
-}: {
-  currentlyPlaying: CurrentlyPlaying | false
-}) {
+export default function Header() {
   return (
     <>
       {/* Top bar */}
