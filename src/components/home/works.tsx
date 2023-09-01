@@ -20,7 +20,7 @@ export const works = [
     name: 'A-Barber',
     description:
       'Some branding, marketing design and web development for my dear sister-in-law.',
-    link: '/work/a-barber',
+    link: 'https://a-barber.ee/',
     illustration: Illustrations.Barber,
   },
   {
