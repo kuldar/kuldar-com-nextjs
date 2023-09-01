@@ -22,10 +22,6 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json())
 export function Listening() {
   // const [playing, setPlaying] = useState<CurrentlyPlaying | false>(false)
   const { data, error } = useSWR('/api/listening', fetcher)
-  if (error) return <div>Failed to load</div>
-  if (!data) return <div>Loading...</div>
-
-  const { playing } = data
 
   return (
     <motion.div
@@ -34,67 +30,77 @@ export function Listening() {
       variants={variants.staggerChildrenQuick}
       className="col-span-10 hidden flex-col items-end justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 text-right md:col-span-6 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4"
     >
-      <motion.div
-        transition={transitions.default}
-        variants={variants.fadeInDown}
-        className="mb-4 w-full border-b border-gray-500 pb-4 text-sm font-bold uppercase text-gray-200"
-      >
-        {playing ? 'Currently playing' : 'Recent favorite'}
-      </motion.div>
-
-      {playing ? (
-        <motion.a
-          transition={transitions.default}
-          variants={variants.fadeInDown}
-          target="_blank"
-          href={playing.songUrl}
-          className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
-        >
-          <div>
-            <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
-              {playing.artist}
-            </div>
-
-            <div className="text-gray-50">{playing.title}</div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute inset-0 z-10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),inset_0_-1px_1px_0px_rgba(0,0,0,0.4)]"></div>
-            <div className="absolute inset-1 z-10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25)]"></div>
-            <div className="absolute inset-4 z-10 rounded-full bg-black/30 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.3),inset_0_1px_1px_0px_rgba(0,0,0,0.4)]"></div>
-            <div
-              className={`flex h-12 w-12 items-center justify-center rounded-full bg-cover active:top-[1px] ${
-                playing && playing.isPlaying && 'animate-spin-slower'
-              }`}
-              style={{
-                backgroundImage: `url("${playing.albumImageUrl}")`,
-              }}
-            ></div>
-          </div>
-        </motion.a>
+      {error ? (
+        <div>There was a problem</div>
+      ) : !data ? (
+        <div></div>
       ) : (
-        <motion.a
-          transition={transitions.default}
-          variants={variants.fadeInDown}
-          target="_blank"
-          href={favorite.songUrl}
-          className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
-        >
-          <div>
-            <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
-              {favorite.artist}
-            </div>
+        <>
+          <motion.div
+            transition={transitions.default}
+            variants={variants.fadeInDown}
+            className="mb-4 w-full border-b border-gray-500 pb-4 text-sm font-bold uppercase text-gray-200"
+          >
+            {data.playing ? 'Currently playing' : 'Recent favorite'}
+          </motion.div>
 
-            <div className="text-gray-50">{favorite.title}</div>
-          </div>
+          {data.playing ? (
+            <motion.a
+              transition={transitions.default}
+              variants={variants.fadeInDown}
+              target="_blank"
+              href={data.playing.songUrl}
+              className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
+            >
+              <div>
+                <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
+                  {data.playing.artist}
+                </div>
 
-          <div
-            className="relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 bg-cover transition-colors active:top-[1px] group-hover:border-gray-200"
-            style={{
-              backgroundImage: `url("${favorite.albumImageUrl}")`,
-            }}
-          ></div>
-        </motion.a>
+                <div className="text-gray-50">{data.playing.title}</div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-0 z-10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),inset_0_-1px_1px_0px_rgba(0,0,0,0.4)]"></div>
+                <div className="absolute inset-1 z-10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25)]"></div>
+                <div className="absolute inset-4 z-10 rounded-full bg-black/30 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.3),inset_0_1px_1px_0px_rgba(0,0,0,0.4)]"></div>
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-full bg-cover active:top-[1px] ${
+                    data.playing &&
+                    data.playing.isPlaying &&
+                    'animate-spin-slower'
+                  }`}
+                  style={{
+                    backgroundImage: `url("${data.playing.albumImageUrl}")`,
+                  }}
+                ></div>
+              </div>
+            </motion.a>
+          ) : (
+            <motion.a
+              transition={transitions.default}
+              variants={variants.fadeInDown}
+              target="_blank"
+              href={favorite.songUrl}
+              className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
+            >
+              <div>
+                <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
+                  {favorite.artist}
+                </div>
+
+                <div className="text-gray-50">{favorite.title}</div>
+              </div>
+
+              <div
+                className="relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 bg-cover transition-colors active:top-[1px] group-hover:border-gray-200"
+                style={{
+                  backgroundImage: `url("${favorite.albumImageUrl}")`,
+                }}
+              ></div>
+            </motion.a>
+          )}
+        </>
       )}
     </motion.div>
   )

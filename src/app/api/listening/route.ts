@@ -7,4 +7,4 @@ export async function GET() {
   return NextResponse.json({ data: currentlyPlaying })
 }
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 0
