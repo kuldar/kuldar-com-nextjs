@@ -1,11 +1,12 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 import { animate, transitions, variants } from '@/utils/animations'
 import { type CurrentlyPlaying } from '@/utils/spotify'
 
-const currentFavourite: CurrentlyPlaying = {
+const favorite: CurrentlyPlaying = {
   artist: 'Colyn',
   title: 'Wait For You',
   albumImageUrl:
@@ -14,11 +15,18 @@ const currentFavourite: CurrentlyPlaying = {
   isPlaying: false,
 }
 
-export async function Listening({
-  currentlyPlaying,
-}: {
-  currentlyPlaying: CurrentlyPlaying | false
-}) {
+export function Listening() {
+  const [playing, setPlaying] = useState<CurrentlyPlaying | false>(false)
+
+  useEffect(() => {
+    fetch('/api/listening')
+      .then((res) => res.json())
+      .then(({ data }) => {
+        console.log({ data })
+        setPlaying(data)
+      })
+  }, [])
+
   return (
     <motion.div
       {...animate}
@@ -31,23 +39,23 @@ export async function Listening({
         variants={variants.fadeInDown}
         className="mb-4 w-full border-b border-gray-500 pb-4 text-sm font-bold uppercase text-gray-200"
       >
-        {currentlyPlaying ? 'Currently playing' : 'Current favorite'}
+        {playing ? 'Currently playing' : 'Recent favorite'}
       </motion.div>
 
-      {currentlyPlaying ? (
+      {playing ? (
         <motion.a
           transition={transitions.default}
           variants={variants.fadeInDown}
           target="_blank"
-          href={currentlyPlaying.songUrl}
+          href={playing.songUrl}
           className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
         >
           <div>
             <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
-              {currentlyPlaying.artist}
+              {playing.artist}
             </div>
 
-            <div className="text-gray-50">{currentlyPlaying.title}</div>
+            <div className="text-gray-50">{playing.title}</div>
           </div>
 
           <div className="relative">
@@ -56,12 +64,10 @@ export async function Listening({
             <div className="absolute inset-4 z-10 rounded-full bg-black/30 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.3),inset_0_1px_1px_0px_rgba(0,0,0,0.4)]"></div>
             <div
               className={`flex h-12 w-12 items-center justify-center rounded-full bg-cover active:top-[1px] ${
-                currentlyPlaying &&
-                currentlyPlaying.isPlaying &&
-                'animate-spin-slower'
+                playing && playing.isPlaying && 'animate-spin-slower'
               }`}
               style={{
-                backgroundImage: `url("${currentlyPlaying.albumImageUrl}")`,
+                backgroundImage: `url("${playing.albumImageUrl}")`,
               }}
             ></div>
           </div>
@@ -71,21 +77,21 @@ export async function Listening({
           transition={transitions.default}
           variants={variants.fadeInDown}
           target="_blank"
-          href={currentFavourite.songUrl}
+          href={favorite.songUrl}
           className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
         >
           <div>
             <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
-              {currentFavourite.artist}
+              {favorite.artist}
             </div>
 
-            <div className="text-gray-50">{currentFavourite.title}</div>
+            <div className="text-gray-50">{favorite.title}</div>
           </div>
 
           <div
             className="relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 bg-cover transition-colors active:top-[1px] group-hover:border-gray-200"
             style={{
-              backgroundImage: `url("${currentFavourite.albumImageUrl}")`,
+              backgroundImage: `url("${favorite.albumImageUrl}")`,
             }}
           ></div>
         </motion.a>
