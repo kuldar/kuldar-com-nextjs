@@ -6,5 +6,3 @@ export async function GET() {
   const currentlyPlaying = await getCurrentlyPlaying()
   return NextResponse.json({ data: currentlyPlaying })
 }
-
-export const revalidate = 60
