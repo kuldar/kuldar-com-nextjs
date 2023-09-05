@@ -8,9 +8,9 @@ import { transitions, variants, whileInView } from '@/utils/animations'
 export default function Footer() {
   return (
     <>
-      <footer className="border-b border-gray-500">
+      <footer className="border-b border-gray-30 dark:border-gray-500">
         <div className="mx-auto max-w-8xl px-2 xs:px-6 sm:px-10">
-          <div className="border-x border-gray-500 p-8 xs:p-20">
+          <div className="border-x border-gray-30 p-8 dark:border-gray-500 xs:p-20">
             <motion.div
               {...whileInView}
               transition={transitions.default}
@@ -22,12 +22,12 @@ export default function Footer() {
                 help building? {` `}
                 <a
                   href="mailto:email@kuldar.com"
-                  className="inline-block text-white underline decoration-green-400"
+                  className="inline-block text-gray-1000 underline decoration-green-400 dark:text-white"
                 >
                   Let&#39;s talk.
                 </a>
               </div>
-              <div className="mx-auto max-w-2xl text-gray-300">
+              <div className="mx-auto max-w-2xl text-gray-35 dark:text-gray-300">
                 {new Date().getFullYear()} &copy; Kuldar Kalvik
               </div>
             </motion.div>
@@ -37,7 +37,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="mx-auto max-w-8xl px-2 xs:px-6 sm:px-10">
-        <div className="h-2 border-x border-gray-500 xs:h-6 sm:h-16"></div>
+        <div className="h-2 border-x border-gray-30 dark:border-gray-500 xs:h-6 sm:h-16"></div>
       </div>
     </>
   )

@@ -45,9 +45,9 @@ export default function Social() {
           title={link.name}
           href={link.link}
           target="_blank"
-          className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 transition-colors hover:border-gray-200 active:top-[1px]"
+          className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-30 transition-colors hover:border-green-400 active:top-[1px] dark:border-gray-500 dark:hover:border-gray-200"
         >
-          <link.icon className="w-5 flex-shrink-0 text-gray-50 transition-all group-hover:text-green-400" />
+          <link.icon className="w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400" />
         </motion.a>
       ))}
     </motion.div>

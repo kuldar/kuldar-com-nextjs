@@ -10,7 +10,7 @@ import { animate, transitions, variants, whileInView } from '@/utils/animations'
 // About component
 export default function AboutMe() {
   return (
-    <div className="order-2 col-span-12 flex flex-col justify-between border-x border-gray-500 md:order-1 md:col-span-6 min-[896px]:col-span-7 xl:col-span-4">
+    <div className="order-2 col-span-12 flex flex-col justify-between border-x border-gray-30 dark:border-gray-500 md:order-1 md:col-span-6 min-[896px]:col-span-7 xl:col-span-4">
       {/* Intro */}
       <div className="px-4 pt-4 xs:px-10 xs:pt-10">
         <motion.h2
@@ -42,7 +42,7 @@ export default function AboutMe() {
             <Link
               target="_blank"
               href="https://www.instagram.com/kkkuldar/"
-              className="text-white underline decoration-green-400"
+              className="text-gray-1000 underline decoration-green-400 dark:text-white"
             >
               play with cameras
             </Link>
@@ -50,7 +50,7 @@ export default function AboutMe() {
             <Link
               target="_blank"
               href="https://www.youtube.com/watch?v=TeVbYCIFVa8"
-              className="text-white underline decoration-green-400"
+              className="text-gray-1000 underline decoration-green-400 dark:text-white"
             >
               space rockets
             </Link>{' '}

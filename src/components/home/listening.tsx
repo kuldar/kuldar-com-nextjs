@@ -26,20 +26,18 @@ export function Listening() {
       {...animate}
       transition={transitions.default}
       variants={variants.staggerChildrenQuick}
-      className="col-span-10 hidden flex-col items-end justify-end border-x border-t border-gray-500 bg-gradient-to-br from-gray-700 via-gray-1000 to-gray-1000 p-8 text-right md:col-span-6 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4"
+      className="col-span-10 hidden flex-col items-end justify-end border-x border-t border-gray-30 bg-gradient-to-br from-gray-30/30 via-white to-white p-8 text-right dark:border-gray-500 dark:from-gray-700 dark:via-gray-1000 dark:to-gray-1000 md:col-span-6 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-5 lg:col-span-4"
     >
       {isLoading ? (
         <div></div>
       ) : error ? (
         <div>There was a problem</div>
-      ) : !playing ? (
-        <div></div>
       ) : (
         <>
           <motion.div
             transition={transitions.default}
             variants={variants.fadeInDown}
-            className="mb-4 w-full border-b border-gray-500 pb-4 text-sm font-bold uppercase text-gray-200"
+            className="mb-4 w-full border-b border-gray-30 pb-4 text-sm font-bold uppercase text-gray-1000 dark:border-gray-500 dark:text-gray-200"
           >
             {playing ? 'Currently playing' : 'Recent favorite'}
           </motion.div>
@@ -53,11 +51,13 @@ export function Listening() {
               className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
             >
               <div>
-                <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
+                <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-gray-1000 dark:text-white">
                   {playing.artist}
                 </div>
 
-                <div className="text-gray-50">{playing.title}</div>
+                <div className="text-gray-40 dark:text-gray-50">
+                  {playing.title}
+                </div>
               </div>
 
               <div className="relative">
@@ -83,19 +83,26 @@ export function Listening() {
               className="group flex max-w-full items-center justify-end space-x-4 leading-snug active:translate-y-[1px]"
             >
               <div>
-                <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-white">
+                <div className="overflow-hidden whitespace-nowrap text-lg font-medium text-gray-1000 dark:text-white">
                   {favorite.artist}
                 </div>
 
-                <div className="text-gray-50">{favorite.title}</div>
+                <div className="text-gray-40 dark:text-gray-50">
+                  {favorite.title}
+                </div>
               </div>
 
-              <div
-                className="relative flex h-12 w-12 items-center justify-center rounded-full border border-gray-500 bg-cover transition-colors active:top-[1px] group-hover:border-gray-200"
-                style={{
-                  backgroundImage: `url("${favorite.albumImageUrl}")`,
-                }}
-              ></div>
+              <div className="relative">
+                <div className="absolute inset-0 z-10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3),inset_0_-1px_1px_0px_rgba(0,0,0,0.4)]"></div>
+                <div className="absolute inset-1 z-10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25)]"></div>
+                <div className="absolute inset-4 z-10 rounded-full bg-black/30 shadow-[inset_0_-1px_0_0_rgba(255,255,255,0.3),inset_0_1px_1px_0px_rgba(0,0,0,0.4)]"></div>
+                <div
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-cover active:top-[1px]"
+                  style={{
+                    backgroundImage: `url("${favorite.albumImageUrl}")`,
+                  }}
+                ></div>
+              </div>
             </motion.a>
           )}
         </>

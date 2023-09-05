@@ -1,6 +1,7 @@
 import './globals.css'
 import localFont from 'next/font/local'
 import meta from '@/utils/meta'
+import { ThemeProvider } from '@/components/shared/theme-provider'
 
 import type { Metadata } from 'next'
 
@@ -62,8 +63,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${satoshi.variable} h-full scroll-smooth`}>
-      <body className="h-full w-full overflow-x-hidden bg-gray-1000 text-white selection:bg-green-400 selection:text-gray-900">
-        {children}
+      <body className="h-full w-full overflow-x-hidden bg-white text-gray-1000 selection:bg-green-400 selection:text-gray-900 dark:bg-gray-1000 dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
