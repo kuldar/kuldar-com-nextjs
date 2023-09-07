@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import localFont from 'next/font/local'
 import meta from '@/utils/meta'
 import { ThemeProvider } from '@/components/shared/theme-provider'
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body className="h-full w-full overflow-x-hidden bg-white text-gray-1000 selection:bg-green-400 selection:text-gray-900 dark:bg-gray-1000 dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
