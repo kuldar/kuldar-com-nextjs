@@ -42,7 +42,7 @@ export default async function WorkIndex() {
                   </div>
 
                   <div className="text-lg text-gray-100">
-                    Starting from mid-September.{' '}
+                    Starting from mid-December.{' '}
                     <Link
                       href="mailto:email@kuldar.com"
                       className="text-gray-30 underline decoration-green-500"
@@ -54,21 +54,21 @@ export default async function WorkIndex() {
                   <div className="mt-6 flex gap-3">
                     <div className="-rotate-6 rounded-lg border-t border-gray-50/20 bg-gradient-to-br from-gray-950 via-gray-700 to-gray-800 p-2 opacity-80 transition-all hover:scale-110 hover:opacity-100">
                       <div className="mb-2 text-center text-xs font-bold uppercase tracking-wide text-gray-100">
-                        Aug 2023
+                        Nov 2023
                       </div>
                       <Calendar availability={[false, false, false, false]} />
                     </div>
 
                     <div className="-translate-y-2 rounded-lg border-t border-gray-50/20 bg-gradient-to-br from-gray-950 via-gray-700 to-gray-800 p-2 opacity-80 transition-all hover:scale-110 hover:opacity-100">
                       <div className="mb-2 text-center text-xs font-bold uppercase tracking-wide text-gray-30">
-                        Sept 2023
+                        Dec 2023
                       </div>
                       <Calendar availability={[false, true, true, true]} />
                     </div>
 
                     <div className="rotate-6 rounded-lg border-t border-gray-50/20 bg-gradient-to-br from-gray-950 via-gray-700 to-gray-800 p-2 opacity-80 transition-all hover:scale-110 hover:opacity-100">
                       <div className="mb-2 text-center text-xs font-bold uppercase tracking-wide text-gray-30">
-                        Oct 2023
+                        Jan 2024
                       </div>
                       <Calendar availability={[true, true, true, true]} />
                     </div>

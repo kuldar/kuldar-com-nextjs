@@ -3,28 +3,23 @@
 import { motion } from 'framer-motion'
 
 import Icons from '@/components/svgs/icons'
-import { animate, transitions, variants, whileInView } from '@/utils/animations'
+import { animate, transitions, variants } from '@/utils/animations'
 
 export const links = [
+  {
+    name: 'Youtube',
+    link: 'https://youtube.com/@kuldar',
+    icon: Icons.YoutubeLogo,
+  },
   {
     name: 'X',
     link: 'https://twitter.com/kkuldar',
     icon: Icons.X,
   },
   {
-    name: 'Instagram',
-    link: 'https://instagram.com/kkkuldar',
-    icon: Icons.Instagram,
-  },
-  {
     name: 'Github',
     link: 'https://github.com/kuldar',
     icon: Icons.Github,
-  },
-  {
-    name: 'Email',
-    link: 'mailto:email@kuldar.com',
-    icon: Icons.Email,
   },
 ]
 
@@ -35,7 +30,7 @@ export default function Social() {
       {...animate}
       transition={transitions.default}
       variants={variants.staggerChildrenQuick}
-      className="flex justify-end space-x-2"
+      className="flex items-center justify-end space-x-2"
     >
       {links.map((link) => (
         <motion.a

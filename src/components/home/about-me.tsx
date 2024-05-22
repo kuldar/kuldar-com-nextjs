@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 import Signature from '@/components/svgs/signature'
 import Social from '@/components/shared/social'
-import { animate, transitions, variants, whileInView } from '@/utils/animations'
+import { animate, transitions, variants } from '@/utils/animations'
 
 // About component
 export default function AboutMe() {
@@ -67,9 +67,17 @@ export default function AboutMe() {
           {...animate}
           transition={transitions.default}
           variants={variants.fadeInDown}
-          className="mb-4 text-sm font-bold uppercase"
+          className="mb-2 text-sm font-bold uppercase"
         >
           Find me at
+        </motion.div>
+        <motion.div
+          {...animate}
+          transition={transitions.default}
+          variants={variants.fadeInDown}
+          className="mb-4 font-medium text-gray-50"
+        >
+          email@kuldar.com
         </motion.div>
 
         {/* Icons */}

@@ -1,13 +1,12 @@
+'use client'
+
 import SectionTitle from '@/components/shared/section-title'
 import Icons from '@/components/svgs/icons'
 import { ButtonSmall } from '@/components/shared/buttons'
-
-import { getRecentArticles } from '@/utils/fetch-articles'
+import { Article } from '@/utils/fetch-articles'
 
 // Articles
-export default async function Articles() {
-  // Get recent articles
-  let articles = await getRecentArticles()
+export default function Articles({ articles }: { articles: Article[] }) {
   let latestArticle = articles[0]
   let moreArticles = articles.slice(1)
 

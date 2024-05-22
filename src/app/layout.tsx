@@ -1,10 +1,10 @@
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import localFont from 'next/font/local'
+import type { Metadata } from 'next'
+
 import meta from '@/utils/meta'
 import { ThemeProvider } from '@/components/shared/theme-provider'
-
-import type { Metadata } from 'next'
 
 // Metadata
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${satoshi.variable} h-full scroll-smooth`}>
       <body className="h-full w-full overflow-x-hidden bg-white text-gray-1000 selection:bg-green-400 selection:text-gray-900 dark:bg-gray-1000 dark:text-white">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
           <Analytics />
         </ThemeProvider>

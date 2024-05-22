@@ -20,12 +20,9 @@ export default function Footer() {
               <div className="mb-2 text-gray-50">
                 Have an interesting, stupid or crazy idea you&#39;d like some
                 help building? {` `}
-                <a
-                  href="mailto:email@kuldar.com"
-                  className="inline-block text-gray-1000 underline decoration-green-400 dark:text-white"
-                >
-                  Let&#39;s talk.
-                </a>
+              </div>
+              <div className="mb-2 text-gray-50">
+                Let&#39;s talk – email@kuldar.com
               </div>
               <div className="mx-auto max-w-2xl text-gray-35 dark:text-gray-300">
                 {new Date().getFullYear()} &copy; Kuldar Kalvik
